@@ -1,0 +1,42 @@
+---
+title: "Bem-vindo ao FintechScientist"
+image: images/profile_picture.png
+about:
+  id: hero-heading
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+:::{#hero-heading}
+
+Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!
+
+Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.
+
+```{css echo=FALSE}
+.column {
+text-align: center;
+}
+```
+
+Comece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!
+
+Nesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:
+
+* Dicas práticas de um profissional com vasta experiência na indústria
+* Sem muito matematiquês e com muito código
+* Tutorias e postagens semanais
+
+:::
+
+<script async data-uid="c28f99f95e" src="https://fabulous-originator-9796.ck.page/c28f99f95e/index.js"></script>

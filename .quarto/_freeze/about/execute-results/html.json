@@ -1,0 +1,11 @@
+{
+  "hash": "079a20729de8bed0c457256aeee5a3c2",
+  "result": {
+    "markdown": "---\ntitle: \"Bem-vindo ao FintechScientist\"\nimage: images/profile_picture.png\nabout:\n  id: hero-heading\n  template: jolla\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com\n    - icon: github\n      text: Github\n      href: https://github.com\n\n---\n\n:::{#hero-heading}\n\nOlá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!\n\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\n\n```{css echo=FALSE}\n.column {\ntext-align: center;\n}\n```\n\n\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\n\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\n* Dicas práticas de um profissional com vasta experiência na indústria\n* Sem muito matematiquês e com muito código\n* Tutorias e postagens semanais\n\n:::\n\n<script async data-uid=\"c28f99f95e\" src=\"https://fabulous-originator-9796.ck.page/c28f99f95e/index.js\"></script>\n\n",
+    "supporting": [
+      "about_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

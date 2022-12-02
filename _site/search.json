@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "subscribe.html"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bem-vindo ao FintechScientist",
+    "section": "",
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Bem-vindo ao FintechScientist",
+    "section": "",
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+  },
+  {
+    "objectID": "posts/tres-indicadores-risco-credito/index.html",
+    "href": "posts/tres-indicadores-risco-credito/index.html",
+    "title": "Meu Primeiro Post",
+    "section": "",
+    "text": "Meu Primeiro Post\nInteger egestas, orci eu malesuada aliquam, urna magna iaculis risus, id mattis purus libero at magna. Sed rhoncus dolor ultrices quam tempus congue. Suspendisse accumsan ex quis dolor tincidunt molestie. Praesent congue augue eu ultricies imperdiet. Proin dictum metus quis tellus lacinia, et dapibus lorem tempus. Ut quis dignissim metus. Ut sollicitudin blandit leo egestas ornare. Fusce et sodales enim, eu bibendum erat. Sed condimentum dolor eu convallis blandit. Pellentesque quam elit, semper ac gravida at, hendrerit maximus velit. Morbi vestibulum, justo sed rhoncus bibendum, odio ex venenatis metus, at vestibulum enim mauris vel nibh. Phasellus at ante eu orci mollis condimentum vitae quis velit. Vestibulum eget nisi consectetur, egestas enim sit amet, cursus felis. Sed nibh odio, varius a lectus ut, scelerisque auctor orci.\n\n\n\n\nsubscribe.html"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "",
+    "section": "",
+    "text": "Quarto Tips\nThe ultimate guide to starting a Quarto blog\nHow to publish a Quarto Blog\nCreating a Blog With Quarto"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Bem-vindo ao FintechScientist 🖐️",
+    "section": "",
+    "text": "Nov 28, 2022\n\n\nMarcus O. da Silva\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 24, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nNov 21, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/tres-indicadores-risco-credito/index.html#meu-primeiro-post",
+    "href": "posts/tres-indicadores-risco-credito/index.html#meu-primeiro-post",
+    "title": "Meu Primeiro Post",
+    "section": "Meu Primeiro Post",
+    "text": "Meu Primeiro Post\nInteger egestas, orci eu malesuada aliquam, urna magna iaculis risus, id mattis purus libero at magna. Sed rhoncus dolor ultrices quam tempus congue. Suspendisse accumsan ex quis dolor tincidunt molestie. Praesent congue augue eu ultricies imperdiet. Proin dictum metus quis tellus lacinia, et dapibus lorem tempus. Ut quis dignissim metus. Ut sollicitudin blandit leo egestas ornare. Fusce et sodales enim, eu bibendum erat. Sed condimentum dolor eu convallis blandit. Pellentesque quam elit, semper ac gravida at, hendrerit maximus velit. Morbi vestibulum, justo sed rhoncus bibendum, odio ex venenatis metus, at vestibulum enim mauris vel nibh. Phasellus at ante eu orci mollis condimentum vitae quis velit. Vestibulum eget nisi consectetur, egestas enim sit amet, cursus felis. Sed nibh odio, varius a lectus ut, scelerisque auctor orci."
+  }
+]

@@ -1,0 +1,9 @@
+---
+title: "Presentations"
+page-layout: full
+listing:
+  contents: presentations/**/*.qmd
+  type: default
+  fields: [date, title]
+  sort: 'date desc'
+---

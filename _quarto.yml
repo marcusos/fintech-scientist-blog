@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: ""
+  body-footer: "subscribe.html"
+  description: "FintechScientist por Marcus Silva"
+  reader-mode: true
+  navbar:
+    logo: "images/blog-logo.png"
+    favicon: "images/blog-logo-icon.png"
+    right:
+      - text: Blog
+        href: blog.qmd
+      - text: Sobre
+        href: about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+    cookie-consent: true
+format:
+  html:
+    theme: litera
+    css: styles.css
+    linkcolor: "#6A38D4"
+
+
+
