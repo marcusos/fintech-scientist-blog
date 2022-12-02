@@ -1,6 +1,7 @@
 ---
 title: "Bem-vindo ao FintechScientist"
 image: images/profile_picture.png
+lang: pt
 about:
   id: hero-heading
   template: jolla

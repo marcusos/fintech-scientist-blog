@@ -16,6 +16,12 @@ toc-depth: 3
 
 page-layout: article
 
+lang: pt
+
+format:
+  html:
+    include-after-body: ../post_footer.html
+
 comments:
   giscus:
     repo: marcusos/fintech-scientist-blog

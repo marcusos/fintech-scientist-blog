@@ -1,5 +1,6 @@
 ---
 title: "Bem-vindo ao FintechScientist 🖐️"
+lang: pt
 listing:
   contents: posts
   sort: "date desc"
