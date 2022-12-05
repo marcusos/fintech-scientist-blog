@@ -1,9 +1,10 @@
 ---
-title: "Presentations"
+title: "Slides"
 page-layout: full
 listing:
-  contents: presentations/**/*.qmd
+  contents: presentations/**/*.ipynb
   type: default
   fields: [date, title]
   sort: 'date desc'
 ---
+

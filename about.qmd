@@ -1,5 +1,5 @@
 ---
-title: "Bem-vindo ao FintechScientist"
+title: "Bem-vindo ao FintechScientist 👋"
 image: images/profile_picture.png
 lang: pt
 about:
@@ -20,9 +20,11 @@ about:
 
 :::{#hero-heading}
 
-Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!
+Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar e professor nas horas vagas!
 
+<center>
 Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.
+</center>
 
 ```{css echo=FALSE}
 .column {

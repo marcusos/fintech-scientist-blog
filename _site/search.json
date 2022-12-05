@@ -21,32 +21,60 @@
     "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\n\n\n\nsubscribe.html"
   },
   {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Bem-vindo ao FintechScientist",
+    "title": "Bem-vindo ao FintechScientist 👋",
     "section": "",
-    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar e professor nas horas vagas!\n\n Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\nComece a aplicar Machine Learning e Data Science para:\n\nModelagem de risco e crédito\nChurn\nFinanças\nEconomia\nFraude\n\n\nTudo isso com exemplos claros e práticos!\n\nNesse site você encontrará conteúdos que irão acelerar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais!\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Bem-vindo ao FintechScientist",
+    "title": "Bem-vindo ao FintechScientist 👋",
     "section": "",
-    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, sr. manager de ciência de dados no QuintoAndar e professor nas horas vagas!\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar e professor nas horas vagas!\n\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "",
     "section": "",
-    "text": "Quarto Tips\nThe ultimate guide to starting a Quarto blog\nHow to publish a Quarto Blog\nCreating a Blog With Quarto"
+    "text": "The blog links\n\nGithub page\nNetlify Site\n\n\n\nSome tips\n\nHow to convert revealjs to PDF: use ?print-pdf"
   },
   {
-    "objectID": "presentations.html",
-    "href": "presentations.html",
-    "title": "Presentations",
-    "section": "",
-    "text": "No matching items"
+    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando",
+    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando",
+    "title": "",
+    "section": "Testando",
+    "text": "Testando"
+  },
+  {
+    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando-2",
+    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando-2",
+    "title": "",
+    "section": "Testando 2",
+    "text": "Testando 2\n\n\n\nFintechScientist"
+  },
+  {
+    "objectID": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#bem-vindo-ao-fintechscientist",
+    "href": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#bem-vindo-ao-fintechscientist",
+    "title": "",
+    "section": "Bem-vindo ao FintechScientist",
+    "text": "Bem-vindo ao FintechScientist"
+  },
+  {
+    "objectID": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#testando-2",
+    "href": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#testando-2",
+    "title": "",
+    "section": "Testando 2",
+    "text": "Testando 2\n\n\n\nFintechScientist"
   },
   {
     "objectID": "blog.html",

@@ -5,3 +5,9 @@
     width: auto;
     padding-right: 6px;
 }
+
+
+.c-center-bold {
+  text-align: center;
+  font-weight: bold;
+}

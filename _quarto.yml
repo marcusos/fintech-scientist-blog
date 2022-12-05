@@ -13,12 +13,16 @@ website:
     right:
       - text: Blog
         href: blog.qmd
+      - text: Slides
+        href: slides.qmd
       - text: Sobre
         href: about.qmd
-      - icon: github
-        href: https://github.com/
+      - text: Webinars
+        href: webinars.qmd
+      - icon: linkedin
+        href: linkedin.com/in/marcuos/
       - icon: twitter
-        href: https://twitter.com
+        href: twitter.com/
   cookie-consent:
     type: express
     style: headline

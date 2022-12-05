@@ -1,7 +1,10 @@
 [
   {
-    "listing": "/presentations.html",
-    "items": []
+    "listing": "/slides.html",
+    "items": [
+      "/presentations/slide_apresentacao_blog/slide_apresentacao_blog.html",
+      "/presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html"
+    ]
   },
   {
     "listing": "/blog.html",
