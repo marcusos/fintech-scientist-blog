@@ -1,38 +1,24 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/o-que-e-probabilidade-de-inad/index.html",
+    "href": "posts/o-que-e-probabilidade-de-inad/index.html",
+    "title": "O que é a Probabilidade de Inadimplência (PD)?",
     "section": "",
-    "text": "subscribe.html"
-  },
-  {
-    "objectID": "posts/tres-indicadores-risco-credito/index.html",
-    "href": "posts/tres-indicadores-risco-credito/index.html",
-    "title": "Meu Primeiro Post",
-    "section": "",
-    "text": "Meu Primeiro Post\nInteger egestas, orci eu malesuada aliquam, urna magna iaculis risus, id mattis purus libero at magna. Sed rhoncus dolor ultrices quam tempus congue. Suspendisse accumsan ex quis dolor tincidunt molestie. Praesent congue augue eu ultricies imperdiet. Proin dictum metus quis tellus lacinia, et dapibus lorem tempus. Ut quis dignissim metus. Ut sollicitudin blandit leo egestas ornare. Fusce et sodales enim, eu bibendum erat. Sed condimentum dolor eu convallis blandit. Pellentesque quam elit, semper ac gravida at, hendrerit maximus velit. Morbi vestibulum, justo sed rhoncus bibendum, odio ex venenatis metus, at vestibulum enim mauris vel nibh. Phasellus at ante eu orci mollis condimentum vitae quis velit. Vestibulum eget nisi consectetur, egestas enim sit amet, cursus felis. Sed nibh odio, varius a lectus ut, scelerisque auctor orci.\n\n\n\n\nsubscribe.html"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\n\n\n\nsubscribe.html"
+    "text": "A PD é uma medida importante para bancos e outros credores, pois ajuda a avaliar o risco de emprestar dinheiro a um determinado tomador de empréstimo. Uma PD mais alta indica um risco maior de inadimplência e, portanto, uma maior probabilidade de que o credor não possa recuperar o valor total de seu empréstimo. Como resultado, os credores geralmente exigem taxas de juros mais altas ou mais garantias de empréstimos com uma PD mais alta. Um novo pedido pode ser negado dependendo de quão alta é a PD desse pedido.\n\nA PD é geralmente estimada usando modelos estatísticos que incorporam uma variedade de fatores, como o score de crédito do tomador de empréstimo, renda e a relação dívida/renda. Esses modelos são projetados para prever a probabilidade de inadimplência com base em dados históricos, perfil do tomador e outras informações relevantes. O código abaixo ilustra em python como é a criação de um modelo de PD.\n\n# Import the LogisticRegression class from the sklearn library\nfrom sklearn.linear_model import LogisticRegression\nimport pandas as pd\n\n# Read the data\ndf = pd.read_csv('<path_to_default_dataset>')\n\n# Define the features of the dataset\nfeatures = [\"income\", \"age\", \"payment_delays\", \"credit_score\"]\nlabel = 'default'\n\n# Define the input and the label\nX = df[features]\ny = df[label]\n\n# Create a logistic regression model\nmodel = LogisticRegression()\n\n# Train the model on our sample dataset\nmodel.fit(X, y)\n\n# Use the model to predict the probability of default for new data\npredictions = model.predict_proba(X_new)\n\nEm geral, a probabilidade de inadimplência é uma medida crucial na modelagem de risco de crédito que ajuda os credores a avaliar o risco associado a emprestar dinheiro a um determinado tomador de empréstimo. A forma mais comum de resolver esse tipo de problema é atráves de algum algóritmo de classificação como a regressão logística."
   },
   {
     "objectID": "slides.html",
     "href": "slides.html",
     "title": "Slides",
     "section": "",
-    "text": "No matching items"
+    "text": "Dec 10, 2022\n\n\nMarcus O. Silva\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Bem-vindo ao FintechScientist 👋",
+    "title": "",
     "section": "",
-    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar e professor nas horas vagas!\n\n Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\nComece a aplicar Machine Learning e Data Science para:\n\nModelagem de risco e crédito\nChurn\nFinanças\nEconomia\nFraude\n\n\nTudo isso com exemplos claros e práticos!\n\nNesse site você encontrará conteúdos que irão acelerar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais!\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar, professor e guitarreiro nas horas vagas!\n\n Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\nComece a aplicar Machine Learning e Data Science para:\n\nModelagem de risco e crédito\nChurn\nFinanças\nEconomia\nFraude\n\n\nTudo isso com exemplos claros e práticos!\n\nNesse site você encontrará conteúdos que irão acelerar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais!\n\n \n  \n   \n  \n    \n     LinkedIn\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github"
   },
   {
     "objectID": "about.html",
@@ -46,41 +32,27 @@
     "href": "references.html",
     "title": "",
     "section": "",
-    "text": "The blog links\n\nGithub page\nNetlify Site\n\n\n\nSome tips\n\nHow to convert revealjs to PDF: use ?print-pdf"
+    "text": "### References * Quarto Tips * The ultimate guide to starting a Quarto blog * How to publish a Quarto Blog * Creating a Blog With Quarto * Blog that has Credit Risk Modeling Posts * Example of an online course to get inspired"
   },
   {
-    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando",
-    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando",
+    "objectID": "references.html#synthetic-data-generator",
+    "href": "references.html#synthetic-data-generator",
     "title": "",
-    "section": "Testando",
-    "text": "Testando"
+    "section": "Synthetic data generator",
+    "text": "Synthetic data generator\n\nSDV\nLib to Generating synth date\nHow to convert revealjs to PDF: use ?print-pdf"
   },
   {
-    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando-2",
-    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#testando-2",
+    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
+    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
     "title": "",
-    "section": "Testando 2",
-    "text": "Testando 2\n\n\n\nFintechScientist"
-  },
-  {
-    "objectID": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#bem-vindo-ao-fintechscientist",
-    "href": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#bem-vindo-ao-fintechscientist",
-    "title": "",
-    "section": "Bem-vindo ao FintechScientist",
-    "text": "Bem-vindo ao FintechScientist"
-  },
-  {
-    "objectID": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#testando-2",
-    "href": "presentations/slide_apresentacao_blog/slide_apresentacao_blog.html#testando-2",
-    "title": "",
-    "section": "Testando 2",
-    "text": "Testando 2\n\n\n\nFintechScientist"
+    "section": "",
+    "text": "Plot dos Indicadores macroeconômicos\n\n\n\n\n\n\n\n\nwww.fintechscientist.com (por Marcus Silva)"
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Bem-vindo ao FintechScientist 🖐️",
     "section": "",
-    "text": "28 de nov. de 2022\n\n\nMarcus O. da Silva\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\n24 de nov. de 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n21 de nov. de 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Modelagem de Crédito\n\n\nTeoria\n\n\n\n\n\n\n\n\n\n\n\n11 de dez. de 2022\n\n\nMarcus O. da Silva\n\n\n\n\n\n\nNenhum item correspondente"
   }
 ]

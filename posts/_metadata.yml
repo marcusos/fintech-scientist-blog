@@ -20,6 +20,7 @@ lang: pt
 
 format:
   html:
+    code-fold: false
     include-after-body: ../post_footer.html
 
 comments:

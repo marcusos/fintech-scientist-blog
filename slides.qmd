@@ -1,10 +1,9 @@
 ---
 title: "Slides"
-page-layout: full
 listing:
   contents: presentations/**/*.ipynb
   type: default
-  fields: [date, title]
+  fields: [date, title, author]
   sort: 'date desc'
 ---
 
