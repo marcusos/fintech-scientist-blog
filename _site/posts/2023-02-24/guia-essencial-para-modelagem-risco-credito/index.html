@@ -189,7 +189,7 @@ cookieconsent.run({
   <li><a href="#perda-esperada-expected-loss" id="toc-perda-esperada-expected-loss" class="nav-link" data-scroll-target="#perda-esperada-expected-loss">Perda Esperada (Expected Loss)</a></li>
   <li><a href="#credit-scoring-e-score-card" id="toc-credit-scoring-e-score-card" class="nav-link" data-scroll-target="#credit-scoring-e-score-card">Credit Scoring e Score Card</a></li>
   <li><a href="#o-que-é-modelagem-de-risco-de-crédito" id="toc-o-que-é-modelagem-de-risco-de-crédito" class="nav-link" data-scroll-target="#o-que-é-modelagem-de-risco-de-crédito">O Que é Modelagem de Risco de Crédito?</a></li>
-  <li><a href="#exemplo-de-decisões-de-crédito-baseada-no-roi" id="toc-exemplo-de-decisões-de-crédito-baseada-no-roi" class="nav-link" data-scroll-target="#exemplo-de-decisões-de-crédito-baseada-no-roi">Exemplo de decisões de crédito baseada no ROI</a></li>
+  <li><a href="#exemplo-de-decisões-de-crédito-baseadas-no-roi" id="toc-exemplo-de-decisões-de-crédito-baseadas-no-roi" class="nav-link" data-scroll-target="#exemplo-de-decisões-de-crédito-baseadas-no-roi">Exemplo de decisões de crédito baseadas no ROI</a></li>
   <li><a href="#definição-de-uma-política-de-crédito" id="toc-definição-de-uma-política-de-crédito" class="nav-link" data-scroll-target="#definição-de-uma-política-de-crédito">Definição de uma Política de Crédito</a></li>
   <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
   </ul>
@@ -295,7 +295,7 @@ cookieconsent.run({
 </tr>
 </tbody>
 </table>
-<p>O EAD (exposure at default) é o montante (em dinheiro) exposto à perda no caso de default do mutuário. Ele é igual ao saldo devedor do empréstimo no momento do default. Ele pode ser estimado como uma média ou por modelos de regressão. Ele pode ser representado na forma de percentual ou em valores absolutos</p>
+<p>O EAD (exposure at default) é o montante (em dinheiro) exposto à perda no caso de default do mutuário. Ele é igual ao saldo devedor do empréstimo no momento do default. Ele pode ser estimado como uma média ou por modelos de regressão. Ele pode ser representado na forma de percentual ou em valores absolutos.</p>
 <p>A LGD (loss given default) é a perda esperada em percentual do EAD no caso de default. Ela considera a capacidade de recuperação e cobrança da instituição financeira e outros fatores, é equivalente a <code>1 - Taxa de recuperação</code>. Se trata de uma proporção de exposição quando o solicitante entra em default. Pode ser estimada usando regressão aplicando a transformação logit para limitar o intervalo de predição entre 0 e 1.</p>
 <p>Para exemplificar, considere que alguém faça um empréstimo de R$ 300 mil, depois de um tempo esse empréstimo tenha um saldo devedor de R$ 50 mil, depois de várias ligações a instituição financeira conseguiu um acordo para receber ao menos R$ 10 mil desse empréstimo. Logo, a EAD é R$ 50 mil, e a <code>LGD = 10/50 = 20%</code>.</p>
 <p>Segue abaixo uma tabela com exemplos de valores estimados dessas medidas para alguns solicitantes de crédito:</p>
@@ -322,21 +322,21 @@ cookieconsent.run({
 <td>0.2</td>
 <td>R$ 200 mil</td>
 <td>0.3</td>
-<td>R$ 60</td>
+<td>R$ 60 mil</td>
 </tr>
 <tr class="odd">
 <td>Pedro</td>
 <td>0.3</td>
 <td>R$ 300 mil</td>
 <td>0.2</td>
-<td>R$ 18</td>
+<td>R$ 18 mil</td>
 </tr>
 <tr class="even">
 <td>Amanda</td>
 <td>0.4</td>
 <td>R$ 400 mil</td>
 <td>0.2</td>
-<td>R$ 80</td>
+<td>R$ 80 mil</td>
 </tr>
 </tbody>
 </table>
@@ -427,13 +427,13 @@ cookieconsent.run({
 <p><strong>O método judgmental</strong> é baseado na experiência e no julgamento de analistas de crédito. Ele leva em consideração vários fatores, conhecidos como os 5 Cs do crédito: caráter, capital, capacidade, condição e colateral.</p>
 <p><strong>Os modelos quantitativos</strong>, por outro lado, são baseados em dados e estatísticas e usam técnicas de análise de dados e modelos estatísticos e de Machine Learning para estimar o risco de crédito. Alguns exemplos de modelos quantitativos incluem a regressão logística, o random forest e os gradient boosted trees (como o Xgboost, Lightgbm e Catboost). Os modelos de Ml podem ser empregados para criar scores de créditos ou para computar diretamente as medidas de PD, EAD e LGD.</p>
 <p>Existem diversas variáveis que podem ser consideradas na modelagem de risco de crédito, incluindo variáveis macroeconômicas (como o Produto Interno Bruto (PIB), a taxa de desemprego, os índices de consumo, serviço e indústria e o índice de endividamento das famílias brasileiras), variáveis específicas do mutuário (como idade, renda, endividamento, score Serasa e score Boa Vista) e variáveis relacionadas ao produto financeiro/empréstimo (como juros, colateral, valor e maturidade do empréstimo).</p>
-<p>Atualmente, os métodos de Aprendizado de Máquina (ML) são fundamentais na criação de modelos de risco de crédito. O processo de desenvolvimento de um modelo de ML para risco de crédito inclui várias etapas, tais como:</p>
+<p>Atualmente, os métodos de Aprendizado de Máquina (ML) são fundamentais para a criação de modelos de risco de crédito. O processo de desenvolvimento de um modelo de ML para risco de crédito inclui várias etapas, tais como:</p>
 <ul>
-<li><strong>Definição do problema</strong> : É importante neste momento descrever qual é a questão a ser resolvida, qual é a hipótese de resolução, e quais são as métricas de negócio que devem ser impactadas. Por exemplo, deseja-se aumentar a receita, diminuir os gastos, aumentar as conversões ou diminuir as perdas? Também é necessário definir a melhor variável resposta para esse problema.</li>
+<li><strong>Definição do problema</strong>: é importante neste momento descrever qual é a questão a ser resolvida, qual é a hipótese de resolução e quais são as métricas de negócio que devem ser impactadas. Por exemplo, deseja-se aumentar a receita, diminuir os gastos, aumentar a conversão ou diminuir as perdas? Também é necessário definir a melhor variável resposta para esse problema.</li>
 <li><strong>Criação do dataset de treino</strong>: o primeiro passo é reunir os dados que serão utilizados para treinar o modelo. Esses dados devem incluir informações sobre o mutuário e o empréstimo, bem como o resultado final (default ou não default).</li>
 <li><strong>Engenharia de features</strong>: a seguir, é necessário escolher quais variáveis serão incluídas no modelo e, se necessário, criar novas variáveis a partir das existentes. Por exemplo, dividir a renda pelo valor da fatura do empréstimo visando obter o comprometimento de renda dos solicitantes.</li>
-<li><strong>Seleção de features</strong>, o qual ajuda nos seguintes pontos: redução no número de variáveis preditoras, melhora na generalização e estabilidade do modelo, trata o problema da multicolinearidade.</li>
-<li><strong>Considerar o impacto dos empréstimos rejeitados na modelagem</strong>, já que a concessão crédito sempre gera um efeito de survival bias. Adicionar informações sobre empréstimos rejeitados ao modelo pode melhorar o desempenho. Técnicas de inferência dos rejeitados podem ser usadas para inferir qual seria a target dos empréstimos rejeitados.</li>
+<li><strong>Seleção de features</strong>: o qual ajuda nos seguintes pontos: redução no número de variáveis preditoras, melhora na generalização e estabilidade do modelo, trata o problema da multicolinearidade.</li>
+<li><strong>Considerar o impacto dos empréstimos rejeitados na modelagem</strong>: já que a concessão crédito sempre gera um efeito de survival bias. Adicionar informações sobre empréstimos rejeitados ao modelo pode melhorar o desempenho. Técnicas de inferência dos rejeitados podem ser usadas para inferir qual seria a target dos empréstimos rejeitados.</li>
 <li><strong>Tratamento de dados faltantes e outliers</strong>: é importante verificar se há dados faltantes ou outliers (valores extremos) no dataset e tratá-los de maneira adequada. Imputar a média/moda ou usar técnicas mais robustas como o KNN e o Weight of Evidence (WoE) são opções a serem empregadas no tratamento dos dados.</li>
 <li><strong>Conjunto de treino, teste e validação</strong>: o dataset deve ser dividido em conjuntos de treino, teste e validação, para que o modelo possa ser treinado e avaliado de maneira adequada. No contexto de crédito é importante usar uma divisão out-of-time em vez de out-of-sample, já que queremos entender a performance do modelo treinado com dados passados para prever o default de solicitantes de crédito de um momento futuro.</li>
 <li><strong>Lidar com o desbalanceamento</strong>: os dados de risco de crédito tendem a ser desbalanceados, no geral existem mais bom pagadores do que mau pagadores. Aplicar técnicas como o class weight (ou seja atribuir um peso maior à classe minoritária na função de custo) ajudam na performance do modelo. Vale ressaltar, que o tratamento do desbalanceamento pode afetar a calibração do modelo.</li>
@@ -449,16 +449,16 @@ cookieconsent.run({
 <li><strong>Re-treino</strong>: caso necessário, o modelo pode ser re-treinado, atualizando o dataset de treino com pontos mais recentes, a fim de melhorar sua performance. Importante destacar a necessidade de cautela em re-treinos automáticos, já que eles podem mudar o apatite de risco da política de crédito vigente.</li>
 </ul>
 </section>
-<section id="exemplo-de-decisões-de-crédito-baseada-no-roi" class="level2">
-<h2 class="anchored" data-anchor-id="exemplo-de-decisões-de-crédito-baseada-no-roi">Exemplo de decisões de crédito baseada no ROI</h2>
+<section id="exemplo-de-decisões-de-crédito-baseadas-no-roi" class="level2">
+<h2 class="anchored" data-anchor-id="exemplo-de-decisões-de-crédito-baseadas-no-roi">Exemplo de decisões de crédito baseadas no ROI</h2>
 <p>O ROI (retorno sobre o investimento) é uma medida financeira que permite comparar o valor do capital investido com o valor esperado de retorno de um empréstimo. Ele pode ser utilizado para tomar decisões de crédito, pois permite comparar o valor esperado de um empréstimo com o valor do capital investido.</p>
-<p>Para calcular o ROI de um empréstimo, é necessário conhecer a taxa de juros esperada e o fluxo de caixa futuro (que inclui as parcelas do empréstimo e os juros). A seguir, apresentamos a fórmula para calcular o ROI de um empréstimo:</p>
+<p>Para calcular o ROI de um empréstimo é necessário conhecer a taxa de juros esperada e o fluxo de caixa futuro (que inclui as parcelas do empréstimo e os juros). A seguir, apresentamos a fórmula para calcular o ROI de um empréstimo:</p>
 <p><strong><code>ROI = (Receita - Perdas - Custos) / Capital Investido</code></strong></p>
-<p>Por exemplo, se o ROI for maior que a taxa básica de juros da economia (CDI) , o empréstimo é considerado viável e pode ser aprovado. Caso contrário, ele deve ser recusado, já que esse montante poderia ser investido em um ativo mais seguro para a instituição financeira.</p>
+<p>Por exemplo, se o ROI for maior que a taxa básica de juros da economia (CDI), o empréstimo é considerado viável e pode ser aprovado. Caso contrário, ele deve ser recusado, já que esse montante poderia ser investido em outro ativo mais seguro.</p>
 </section>
 <section id="definição-de-uma-política-de-crédito" class="level2">
 <h2 class="anchored" data-anchor-id="definição-de-uma-política-de-crédito">Definição de uma Política de Crédito</h2>
-<p>A política de crédito consiste em um conjunto de critérios e limites utilizados para tomar decisões de crédito. Ela é definida com base em vários fatores, como o perfil do mutuário, o tipo de empréstimo, o montante emprestado, a garantia oferecida e o histórico de crédito do mutuário. Além disso, a política de crédito é definida de acordo com o objetivo atual da empresa. Se a empresa estiver focada em expansão (conseguir mais clientes), ela terá uma política mais flexível. Se o foco for a rentabilidade, por consequência, será criada uma política mais restritiva.</p>
+<p>A política de crédito consiste num conjunto de critérios e limites utilizados para tomar decisões de crédito. Ela é definida com base em vários fatores, como o perfil do mutuário, o tipo de empréstimo, o montante emprestado, a garantia oferecida e o histórico de crédito do mutuário. Além disso, a política de crédito é definida de acordo com o objetivo atual da empresa. Se a empresa estiver focada em expansão (conseguir mais clientes), ela terá uma política mais flexível. Se o foco for a rentabilidade, por consequência, será criada uma política mais restritiva.</p>
 <p>Para criar uma política de crédito, é necessário ter um score de crédito. Esse score pode ser um score de mercado ou um score interno, e deve ser calibrado para representar uma definição de default adequada ao problema específico daquela política. Por exemplo, um score interno pode ter sido treinado no ever15mob3 (um target bem curto) para ter dados mais recentes, mas a política de crédito precisa ser criada a partir de um conceito de longo prazo, como, por exemplo, um <strong>ever60mob12</strong> para refletir um default de verdade.</p>
 <p>A calibração do score de crédito para a probabilidade de default pode ser feita pelo método dos percentis. Esse método consiste em clusterizar a população em grupos de acordo com o seu score de crédito. Em seguida, usando um conjunto de dados fora da amostra, é computado o default observado da amostra em cada um desses grupos, essas probabilidades observadas de cada grupo são usadas como a inadimplência esperada. Esses grupos podem ser chamados de categorias de risco ou faixas de risco.</p>
 <p>A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para finalmente computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.</p>
