@@ -1,5 +1,8 @@
 {
   "listingMap": {
+    "courses.qmd": [
+      "courses"
+    ],
     "slides.qmd": [
       "presentations/**/*.ipynb"
     ],

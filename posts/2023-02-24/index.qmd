@@ -1,0 +1,212 @@
+---
+title: "O Guia Essencial para Modelagem de Risco de Crédito"
+date: "02/24/2023"
+categories: [Modelagem de Crédito, Machine Learning]
+image: banner_post.png
+description: Entenda os principais conceitos na modelagem de risco de crédito. E saiba como ela pode ser otimizada com machine learning!
+---
+
+
+
+## O Que é risco de crédito
+O risco de crédito é a possibilidade de perda financeira decorrente do não cumprimento de uma dívida por parte do devedor (mutuário). 
+
+<img src='banner_post.png' width='65%'><img>
+
+Em outras palavras, é o risco de um solicitante de crédito (seja pessoa ou empresa) não honrar os compromissos assumidos em um contrato de empréstimo.
+
+::: {.callout-warning icon=true appearance="simple" style="border-left-color: #9A6EF8"}
+Empréstimo nesse texto é definido de forma ampla, representando qualquer categoria financeira passível de endividamento, por exemplo: financiamento de veículos, aluguel, fatura do cartão de crédito, empréstimos bancários, financiamento imobiliário e até mesmo a mensalidade da faculdade.
+:::
+
+Quando uma instituição financeira concede um empréstimo, ela supostamente acredita que o solicitante será capaz de cumprir com os pagamentos. No entanto, isso nem sempre acontece e é por isso que é importante avaliar o risco de crédito de uma solicitação de empréstimo.
+
+**Risco de crédito = Risco de perda financeira.**
+
+Nesse contexto, este artigo apresenta um guia essencial para a modelagem de risco de crédito:
+
+- Ele descreve as principais regulações do mercado de crédito
+- As medidas e métricas fundamentais da análise de crédito (Perda esperada, PD, EAD, LGD)
+- O conceito de credit-scoring
+- Modelagem de crédito com ML
+- Decisões de crédito baseadas no retorno sobre o investimento
+- Políticas de crédito
+
+## Principais regulações
+
+Primeiramente, por se tratar de uma área altamente regulamentada, é importante ao menos citar as principais regulações do mercado de crédito. Existem várias regulamentações internacionais que visam garantir a integridade e a transparência do mercado de crédito. Algumas das principais regulamentações incluem:
+
+- **A Basileia**: Essa regulamentação, desenvolvida pelo Comitê de Basileia de Supervisão Bancária, estabelece os requisitos de capital mínimo para instituições financeiras, bem como as regras para avaliar o risco de crédito de um empréstimo. Os principais objetivos da mais recente regulamentação, a Basileia III, são garantir que os bancos mantenham capital suficiente, mantenham alavancagem saudável e índices de liquidez e criem reservas anticíclicas.
+- **O IRB-A:** O Internal Rating-Based Approach (IRB-A) é um método para avaliar o risco de crédito que foi desenvolvido pela Basileia. Ele permite às instituições financeiras estimar o risco de crédito de maneira interna, usando modelos quantitativos. Para tal, o IRB-A define conceitos-chave que compõem a perda esperada da análise de crédito (esses conceitos serão melhores explicados a seguir):
+   - Probability of Default (PD)
+   - Exposure at Default (EAD)
+   - Loss Given Default (LGD)
+
+Adicionalmente, sob o foundation IRB, os bancos modelam apenas a Probability of Default. Sob a advanced IRB approach, os bancos também podem modelar seus próprios níveis de Loss Given Default (LGD) e Exposure at Default (EAD).
+
+- **O IRFS 9**: O International Financial Reporting Standard 9 (IRFS 9) é um padrão internacional de contabilidade que estabelece as regras para a mensuração e reconhecimento de ativos financeiros e passivos. Ele inclui disposições específicas para a avaliação do risco de crédito de ativos financeiros. Ele inova ao trazer conceito de Probability of Default no tempo de vida (lifetime) do empréstimo, diferente da Basileia que usa uma janela de um ano para  medir a inadimplência.
+
+## Perda Esperada (Expected Loss)
+
+A Perda Esperada (Expected Loss, EL) é uma medida do risco de crédito de um empréstimo ou carteira de empréstimos. Ela é calculada como a multiplicação da Probabilidade de Inadimplência (Probabilidade de Default, PD), do Exposure at Default (EAD) e do Loss Given Default (LGD).
+
+**`EL = PD * EAD * LGD`**
+
+A PD é a probabilidade de o mutuário entrar em default em um certo período (exemplo, depois de um ano ou no período de maturação do empréstimo). Ela pode ser estimada com base em informações descritivas ou com o uso de modelos de Machine Learning. Se trata de um clássico problema de classificação binária, onde a classe de interesse 1 representa um **mau pagado**r e a classe 0 representa um **bom pagado**r. Por tanto estamos interessados na probabilidade do solicitante ser um **mau pagador.**
+
+Existem diversas formas de definir a variável target (default) para computar a PD, essas formas podem variar de acordo com a regulamentação, definições do negócio, características do produto financeiro, facilidade de recuperação, se o empréstimo tem um período determinado ou indeterminado, dentre outros fatores.
+
+Uma nomenclatura comum para definir uma target de default para créditos com pagamentos recorrentes (aluguel por exemplo) é usar o conceito de everXmobY. O everXmobY representa ao menos uma atraso de um pagamento mensal, por X ou mais dias (**ever X**), dentro de uma janela de Y meses (**Y months on book**).  No geral o Ever é definido como um valor múltiplo  de 30 (30 dias, 60 dias, 90 dias..) e o Mob como um valor múltiplo de 3 (3 meses, 6 meses, 12 meses, 24 meses…).
+
+Por exemplo, considere a definição de default como sendo o ever30mob12, supondo que João nos primeiros 12 meses do seu contrato tenha atrasado uma fatura por 45 dias, ele é considerado um **mau pagador (default)**. Já Carlos registrou duas faturas atrasadas nos primeiros 12 meses do contrato, uma de 14 dias e outra de 15 dias, por serem atrasos menores do que 30 dias ele não é considerado um mau pagador.
+
+|  | Total de faturas atrasadas nos primeiros 12 meses | Maior atraso nos primeiros 12 meses | Ever30Mob12 (default) |
+| --- | --- | --- | --- |
+| João | 1 | 45 | 1 |
+| Carlos | 2 | 15 | 0 |
+| Pedro | 0 | - | 0 |
+| Amanda | 1 | 30 | 1 |
+
+O EAD (exposure at default) é o montante (em dinheiro) exposto à perda no caso de default do mutuário. Ele é igual ao saldo devedor do empréstimo no momento do default. Ele pode ser estimado como uma média ou por modelos de regressão. Ele pode ser representado na forma de percentual ou em valores absolutos
+
+A LGD (loss given default) é a perda esperada em percentual do EAD no caso de default. Ela considera a capacidade de recuperação e cobrança da instituição financeira e outros fatores, é equivalente a `1 - Taxa de recuperação`. Se trata de uma proporção de exposição quando o solicitante entra em default. Pode ser estimada usando regressão aplicando a transformação logit para limitar o intervalo de predição entre 0 e 1.
+
+Para exemplificar, considere que alguém faça um empréstimo de R$ 300 mil, depois de um tempo esse empréstimo tenha um saldo devedor de R$ 50 mil, depois de várias ligações a instituição financeira conseguiu um acordo para receber ao menos R$ 10 mil desse empréstimo. Logo, a EAD é R$ 50 mil, e a `LGD = 10/50 = 20%`.
+
+Segue abaixo uma tabela com exemplos de valores estimados dessas medidas para alguns solicitantes de crédito:
+
+|  | PD | EAD R$ | LGD | Perda Esperada |
+| --- | -- | --- | --- | --- |
+| João | 0.1 | R$ 100 mil | 0.5 | R$ 50 mil |
+| Carlos | 0.2 | R$ 200 mil | 0.3 | R$ 60 |
+| Pedro | 0.3 | R$ 300 mil | 0.2 | R$ 18 |
+| Amanda | 0.4 | R$ 400 mil | 0.2 | R$ 80 |
+
+Ademais, vale falar de outra medida importante, o Effective Maturity (Maturidade Efetiva, ME) é o período de tempo durante o qual o risco de crédito é considerado significativo. Esse período pode ser determinado ou substituído pelo life-time esperado de um contrato de crédito. Ele é usado para calcular o EAD em empréstimos com maturidade indeterminada, como linhas de crédito ou empréstimos revogáveis.
+
+Todas as medidas mencionadas podem ser modeladas usando técnicas quantitativas e aprendizado de máquina. No entanto, o aprendizado de máquina é mais comumente aplicado para modelar a probabilidade de default (PD). Será explorado adiante o uso de Machine Learning para prever a PD.
+
+## Credit Scoring e Score Card
+
+O credit scoring é um processo que atribui uma pontuação a um mutuário com base em suas características e histórico de crédito, com o objetivo de prever a **probabilidade de default**. Ele é amplamente utilizado na modelagem de risco de crédito e na tomada de decisões de crédito.
+
+O credit scoring pode ser obtido externamente via fornecedores terceiros, os chamados **biros de crédito** (no Brasil temos a Serasa e a BoaVista por exemplo), no entanto ele será genérico e tentará prever uma inadimplência ampla. Ou o credit scoring pode ser criado internamente pela própria instituição financeira, trazendo vantagem competitiva e maior poder de identificar inadimplentes para produtos financeiros específicos.
+
+Existem alguns cenários onde é vantajoso usar os scores de mercado (scores de biros de crédito):
+
+- **Captação dos primeiros clientes de um novo produto financeiro**. Por não existir histórico de pagamento, é inviável obter uma modelagem interna. Suponha o seguinte cenário, a startup MeuBank começou sua operação lançando um novo cartão de crédito. Por se tratar do início da operação, ela opta por selecionar clientes com o [score serasa 2.0](https://www.serasa.com.br/score/score-2-0/?gclid=Cj0KCQiAnsqdBhCGARIsAAyjYjQTTDxO519gFaTIYMJmVpCs5PgayU5MeB5VIVVOI3sBrc5IjzIaewIaAocpEALw_wcB) maior do que 800 (score alto), garantindo assim uma base inicial saudável e rentável de clientes a medida que vai trabalhando formas de captar clientes com maior risco para expandir seu marketshare.
+- **Como variável preditora do score interno.** No geral, os scores de mercado são os melhores preditores da inadimplência de um produto financeiro específico; já que conseguem captar e compilar em um único indicador, informações externas e o histórico de crédito do solicitante.
+
+Outrossim, o credit scoring modelado internamente pode ser um número de 0 a 1000 definido a partir da probabilidade de alguma definição da target de default (everXmobY). Ou seja, quanto mais próximo de 1000 for a pontuação melhor é o cliente e menor será sua probabilidade de default no conceito escolhido.
+
+Adicionalmente, o credit scoring pode ser modelado usando indicadores curtos de default (por exemplo, o ever30mob3), visando conseguir dados e tendências mais recentes de inadimplência. Ou ele pode ser modelado usando indicadores longos para refletir uma perda real no tempo de vida do contrato (por exemplo, o ever90mob30).
+
+Observe que, ao usar uma target com janelas longas, como o ever90mob30, os contratos terão que ter pelo menos uma idade de 30 meses, ou seja seriam utilizados apenas contratos muito antigos para modelar o credit scoring. Os clientes recentes podem ter um perfil bem diferente dos clientes com idade maior ou igual a 30 meses. Existe um tradeoff entre escolher definições curtas de default e definições longas de default, essa escolha depende do contexto de negócio.
+
+Além disso, existem dois tipos de credit scoring: o application score e o behavior score. **O application score** é baseado nas informações fornecidas pelo mutuário na solicitação de empréstimo, como renda, idade e endereço. **O behavior score** é baseado no histórico de crédito do mutuário, como pagamentos em dia ou atrasados, limite de crédito atingido e outras informações de crédito. O behavior score é considerado mais preciso do que o application score, pois leva em consideração o comportamento real do mutuário em relação ao pagamento de dívidas.
+
+Ambos os tipos de credit scoring são utilizados para avaliar o risco de crédito e tomar decisões de crédito. No entanto, o application score é mais comumente utilizado na avaliação de novas solicitações de empréstimo, enquanto o behavior score é mais utilizado para avaliar o risco de inadimplência de um mutuário já existente.
+
+O **application score** é usado principalmente para:
+
+- Determinar se a concessão de crédito será aprovado ou não
+- Determinar o pricing do produto financeiro (exemplo juros cobrados em um empréstimo)
+   - Quanto maior o risco, maior é prêmio a ser pego pelo mutuário
+- Determinar o limite pré-aprovado
+- Auxiliar na análise humana da mesa de crédito
+
+O **behavior score** é usado principalmente para:
+
+- Ajustar o limite de crédito ao longo do tempo (aumentar ou diminuir o limite de crédito)
+- Provisão de perdas e de lucro
+- Renovações e oferta de novos produtos
+- Ações de prevenção ao default
+
+Já um **score card** é uma tabela que apresenta a fórmula e a interpretação de scoragem (ou seja, a equação utilizada para calcular a pontuação de crédito) e os pesos atribuídos a cada variável. A seguir, é apresentado um exemplo de um score card baseado em uma regressão logística.
+
+| Variável | Peso (PD) | Pontuação (Score) | Interpretação |
+| --- | --- | --- | --- |
+| Idade > 22 | -0,1 | 100 | Reduz o default |
+| Juros < 2% | -0,2 | 200 | Reduz o default |
+| Endividamento (sim/não) | 0,3 | -300 | Aumenta o default |
+| Score Serasa > 800 | 0,4 | 400 | Aumenta o default |
+| comprometimento > 30% | 0,5 | 500 | Aumenta o default |
+
+A fórmula de scoragem é calculada da seguinte maneira:
+
+**`PD = Logit((-0,01 * idade) + (0,02 * juros) + (-0,03 * endividamento) +`**
+**`(0,04 * score serasa) + (0,05 * comprometimento) + 100)`**
+**`Score = 1000 * (1 - PD)`**
+
+A utilização de modelos mais robustos de ML, como as redes neurais e os gradient boosted trees, tornam mais complexas a interpretação e definição de um score card. Técnicas como o LIME e SHAP values podem ser usadas para interpretar esses modelos Black-boxs.
+
+## O Que é Modelagem de Risco de Crédito?
+
+A modelagem de risco de crédito é o processo de estimar o risco de crédito de um contrato ou de uma carteira de contratos com concessão de crédito. Existem vários métodos para fazer isso, incluindo o método judgmental (também conhecido como mesa de crédito) e os modelos quantitativos.
+
+**O método judgmental** é baseado na experiência e no julgamento de analistas de crédito. Ele leva em consideração vários fatores, conhecidos como os 5 Cs do crédito: caráter, capital, capacidade, condição e colateral.
+
+**Os modelos quantitativos**, por outro lado, são baseados em dados e estatísticas e usam técnicas de análise de dados e modelos estatísticos e de Machine Learning para estimar o risco de crédito. Alguns exemplos de modelos quantitativos incluem a regressão logística, o random forest e os gradient boosted trees (como o Xgboost, Lightgbm e Catboost). Os modelos de Ml podem ser empregados para criar scores de créditos ou para computar diretamente as medidas de PD, EAD e LGD.
+
+Existem diversas variáveis que podem ser consideradas na modelagem de risco de crédito, incluindo variáveis macroeconômicas (como o Produto Interno Bruto (PIB), a taxa de desemprego, os índices de consumo, serviço e indústria e o índice de endividamento das famílias brasileiras), variáveis específicas do mutuário (como idade, renda, endividamento, score Serasa e score Boa Vista) e variáveis relacionadas ao produto financeiro/empréstimo (como juros, colateral, valor e maturidade do empréstimo).
+
+Atualmente, os métodos de Aprendizado de Máquina (ML) são fundamentais na criação de modelos de risco de crédito. O processo de desenvolvimento de um modelo de ML para risco de crédito inclui várias etapas, tais como:
+
+- **Definição do problema** : É importante neste momento descrever qual é a questão a ser resolvida, qual é a hipótese de resolução, e quais são as métricas de negócio que devem ser impactadas. Por exemplo, deseja-se aumentar a receita, diminuir os gastos, aumentar as conversões ou diminuir as perdas? Também é necessário definir a melhor variável resposta para esse problema.
+- **Criação do dataset de treino**: o primeiro passo é reunir os dados que serão utilizados para treinar o modelo. Esses dados devem incluir informações sobre o mutuário e o empréstimo, bem como o resultado final (default ou não default).
+- **Engenharia de features**: a seguir, é necessário escolher quais variáveis serão incluídas no modelo e, se necessário, criar novas variáveis a partir das existentes. Por exemplo, dividir a renda pelo valor da fatura do empréstimo visando obter o comprometimento de renda dos solicitantes.
+- **Seleção de features**, o qual ajuda nos seguintes pontos: redução no número de variáveis preditoras, melhora na generalização e estabilidade do modelo, trata o problema da multicolinearidade.
+- **Considerar o impacto dos empréstimos rejeitados na modelagem**, já que a concessão crédito sempre gera um efeito de survival bias. Adicionar informações sobre empréstimos rejeitados ao modelo pode melhorar o desempenho. Técnicas de inferência dos rejeitados podem ser usadas para inferir qual seria a target dos empréstimos rejeitados.
+- **Tratamento de dados faltantes e outliers**: é importante verificar se há dados faltantes ou outliers (valores extremos) no dataset e tratá-los de maneira adequada. Imputar a média/moda ou usar técnicas mais robustas como o KNN e o Weight of Evidence (WoE) são opções a serem empregadas no tratamento dos dados.
+- **Conjunto de treino, teste e validação**: o dataset deve ser dividido em conjuntos de treino, teste e validação, para que o modelo possa ser treinado e avaliado de maneira adequada. No contexto de crédito é importante usar uma divisão out-of-time em vez de out-of-sample, já que queremos entender a performance do modelo treinado com dados passados para prever o default de solicitantes de crédito de um momento futuro.
+- **Lidar com o desbalanceamento**: os dados de risco de crédito tendem a ser desbalanceados, no geral existem mais bom pagadores do que mau pagadores. Aplicar técnicas como o class weight (ou seja atribuir um peso maior à classe minoritária na função de custo) ajudam na performance do modelo. Vale ressaltar, que o tratamento do desbalanceamento pode afetar a calibração do modelo.
+- **Escolha da técnica de modelagem**: Caso seja necessário um modelo simples, interpretável ou auditável é aconselhável começar com modelos estatísticos padrões como a regressão logística. Se a performance for o requisito principal é aconselhável usar modelos robustos para dados tabulares como o random forest e os gradient boosted trees.
+- **Tunagem de hiperparametro**: os hiperparâmetros do modelo podem ser ajustados para melhorar sua performance. Aqui pode ser empregado o gridsearch, o randomsearch ou até mesmos ferramentas mais avançadas de otimização bayesianas.
+- **Calibração**: é importante calibrar o modelo para garantir que as probabilidades estimadas estejam de acordo com a realidade (probabilidades calibradas podem ser necessárias dependendo dos requisitos de negócio).
+- **Avaliação do modelo**: várias métricas podem ser utilizadas para avaliar a performance do modelo, como a área sob a curva ROC (ROCAUC), a área sob a curva do Precision e Recall (PRAUC) e o Brier Score (medida de calibração). Dessas, a principal é o PRAUC por ser robusta em datasets desbalanceados.
+- **Avaliação financeira do modelo**: aplicar uma validação de performance financeira pode ser pertinente também, levando em consideração os custos e o Presente Value (PV) da receita dos empréstimos aprovados. Nesse contexto são usadas as seguintes métricas: Maximum Profit Criterion (MPC) and Expected Maximum Profit (EMP).
+- **Interpretabilidade do modelo:** A interpretabilidade é a capacidade de se entender e explicar como um modelo de machine learning chega em uma determinada previsão ou decisão. Ela é importante em modelos de risco de crédito, pois ajuda a garantir que as decisões de crédito sejam justas e transparentes, e que os resultados possam ser compreendidos e explicados para os interessados, como os mutuários e as reguladoras. Técnicas de explicação de modelos, como o SHAP (SHapley Additive exPlanations) ou o LIME (Local Interpretable Model-agnostic Explanations) permitem explicar de maneira detalhada como cada feature influencia a previsão ou decisão final.
+- **Aprovação do modelo e definição da política de crédito**: se o modelo for aprovado, ele pode ser implementado e utilizado para tomar decisões de crédito. É importante também definir uma política de crédito, estabelecendo os critérios, limites, taxas de juros para a concessão de empréstimos.
+- **Implantação:** Se possível, é importante também realizar testes A/B e experimentações para avaliar o impacto do novo modelo e política na aprovação e na inadimplência. Por exemplo, ao criar um novo modelo de credit score, deixar ele rodando para um percentual de X% da base, possibilitando a comparação do novo modelo com o modelo antigo.
+- **Monitoramento**: após a implantação, é importante monitorar a performance e estabilidade do modelo, a fim de garantir que ele esteja funcionando de maneira adequada. Nessa etapa podem ser analisado o desempenho em métricas como conversão, indicadores de curto prazo de inadimplência (ever30mob3) ou indicadores de estabilidade do modelo.
+- **Re-treino**: caso necessário, o modelo pode ser re-treinado, atualizando o dataset de treino com pontos mais recentes, a fim de melhorar sua performance. Importante destacar a necessidade de cautela em re-treinos automáticos, já que eles podem mudar o apatite de risco da política de crédito vigente.
+
+## Exemplo de decisões de crédito baseada no ROI
+
+O ROI (retorno sobre o investimento) é uma medida financeira que permite comparar o valor do capital investido com o valor esperado de retorno de um empréstimo. Ele pode ser utilizado para tomar decisões de crédito, pois permite comparar o valor esperado de um empréstimo com o valor do capital investido.
+
+Para calcular o ROI de um empréstimo, é necessário conhecer a taxa de juros esperada e o fluxo de caixa futuro (que inclui as parcelas do empréstimo e os juros). A seguir, apresentamos a fórmula para calcular o ROI de um empréstimo:
+
+**`ROI = (Receita - Perdas - Custos) / Capital Investido`**
+
+Por exemplo, se o ROI for maior que a taxa básica de juros da economia (CDI) , o empréstimo é considerado viável e pode ser aprovado. Caso contrário, ele deve ser recusado, já que esse montante poderia ser investido em um ativo mais seguro para a instituição financeira.
+
+## Definição de uma Política de Crédito
+
+A política de crédito consiste em um conjunto de critérios e limites utilizados para tomar decisões de crédito. Ela é definida com base em vários fatores, como o perfil do mutuário, o tipo de empréstimo, o montante emprestado, a garantia oferecida e o histórico de crédito do mutuário. Além disso, a política de crédito é definida de acordo com o objetivo atual da empresa. Se a empresa estiver focada em expansão (conseguir mais clientes), ela terá uma política mais flexível. Se o foco for a rentabilidade, por consequência, será criada uma política mais restritiva.
+
+Para criar uma política de crédito, é necessário ter um score de crédito. Esse score pode ser um score de mercado ou um score interno, e deve ser calibrado para representar uma definição de default adequada ao problema específico daquela política. Por exemplo, um score interno pode ter sido treinado no ever15mob3 (um target bem curto) para ter dados mais recentes, mas a política de crédito precisa ser criada a partir de um conceito de longo prazo, como, por exemplo, um **ever60mob12** para refletir um default de verdade.
+
+A calibração do score de crédito para a probabilidade de default pode ser feita pelo método dos percentis. Esse método consiste em clusterizar a população em grupos de acordo com o seu score de crédito. Em seguida, usando um conjunto de dados fora da amostra, é computado o default observado da amostra em cada um desses grupos, essas probabilidades observadas de cada grupo são usadas como a inadimplência esperada. Esses grupos podem ser chamados de categorias de risco ou faixas de risco.
+
+A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.
+
+| Score de crédito (ever15mob3) | Faixa de risco | Percentual de defaults (ever60mob12) | EAD | LGD |
+| --- | --- |----------------| --- | --- |
+| 1000-800 | A | 8%                                | 66% | 86% |
+| 800-600 | B | 11%                               | 64% | 71% |
+| 600-400 | C | 13%                               | 63% | 86% |
+| 400-200 | D | 16%                               | 64% | 83% |
+| 200-0 | E | 19%                               | 65% | 89% |
+: Inputs para a política de crédito
+
+| Solicitante | Maturidade | Tx. Juros | Custos | Valor Emp. | Juros | Perda Esperada | Risco | ROI (Receita - Perdas - Custos) | Decisão (ROI > 7.5%) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| João | 36 meses | 15% | 1% | 25000 | 3750 | 1205 | A - 8% | 9% | Aprovado |
+| Maria | 36 meses | 25% | 1% | 20000 | 1500 | 4553 | D - 18% | 5% | Reprovado |
+| Carlos | 36 meses | 23% | 1% | 35000 | 900 | 2783 | C  - 13% | 8.1% | Aprovado |
+: Decisão após aplicar a política de crédito
+
+## Conclusão
+
+Este artigo apresentou um guia essencial para modelagem de risco de crédito, começando pela definição de risco de crédito e suas principais regulações, como a Basileia e o IRB-A. Foram apresentadas medidas e métricas fundamentais da análise de crédito, como a perda esperada, a probabilidade de default, a exposição no momento do default e a perda esperada em caso de default. Além disso, foi explorado o conceito de credit scoring e score card como uma forma de avaliar o risco de crédito e tomar decisões de crédito. Em conjunto, essas técnicas e ferramentas permitem a criação e adoção de políticas de crédito mais efetivas e precisas, ajudando as instituições financeiras a tomar decisões mais informadas e a reduzir o risco de inadimplência.

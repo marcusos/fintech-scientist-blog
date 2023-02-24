@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>- Risco de Crédito com Machine Learning 🖐️</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/blog-logo-icon.png" rel="icon" type="image/png">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VBYL9R2RYQ"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VBYL9R2RYQ', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/course.scss">
+<meta property="og:title" content="- Risco de Crédito com Machine Learning 🖐️">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <img src="./images/blog-logo.png" alt="">
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html">Blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./slides.html">Slides</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Sobre</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./courses.html">Cursos</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/marcuos/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/fintscientist"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Risco de Crédito com Machine Learning 🖐️</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<!-- https://icons.getbootstrap.com/icons/terminal/ -->
+<div class="column-page">
+<div class="columns">
+<div class="column" style="width:65%;">
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="float: left; width: 70px"> <br><br>
+<h1>
+Credit Risk com Machine Learning
+</h1>
+<p>Time-series forecasting is one of the longest-standing applications of machine learning, and is one of the most prevalent techniques used across all of industry (if not the most prevalent). And yet, during the recent ML boom, forecasting has been somewhat left behind.</p>
+<p>The goal of this course is to marry the latest-and-greatest of the field of ML with the existing, classical statistical techniques. In particular, the focus of this course is the practical applications of these techniques, and how they supercharge applications such as causal analysis, demand intelligence, and labor planning</p>
+<div class="row" style="max-width: 50%;">
+<div class="col">
+<p><img src="images/profile-pic.png" class="img-fluid rounded-circle" style="float: left; margin: 5px; width: 60px;"></p>
+</div>
+<div class="col" style="font-size: 12px; padding-top: 10px">
+<strong>Marcus O. Silva</strong>
+<p style="font-size: 10px;">
+Sr.&nbsp;DS Manager, Quinto Andar <br> MSc em Economia
+</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<div class="card" style="width: 18rem;">
+<ul class="list-group list-group-flush" style="font-size: 14px !important;">
+<li class="list-group-item">
+<i class="bi bi-terminal"></i> Projetos realistas que ensinam habilidades da indústria.
+</li>
+<li class="list-group-item">
+<i class="bi bi-camera-video"></i> Encontros ao vivo, 2x por semana, duração de 3 semanas.
+</li>
+<li class="list-group-item">
+<i class="bi bi-people"></i> Aprenda junto com um pequeno grupo de colegas profissionais.
+</li>
+</ul>
+</div>
+<p><br></p>
+<div class="card" style="width: 18rem; $small-font-size;">
+<div class="card-body" style="width: 18rem; font-size: 12px;">
+<p>PRÓXIMA TURMA (3 semanas)<br> <strong>04 de abril</strong></p>
+<p>PREÇO (primeiro lote)<br> <strong>R$ 990 (1500)</strong></p>
+</div>
+</div>
+<p><br> <a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">INSCREVA-SE AGORA</a></p>
+</div>
+</div>
+</div>
+<div class="column-screen" style="background-color: #DFE6E9; padding: 10px;">
+
+  <p style="text-align: center; font-weight: bold; margin: 30px" <big="">Curso ensinado por um profissional<br>com vasta experiência na indústria!
+  </p>
+  
+  <div class=".column-body" style="margin: 0 auto; width: 50%;">
+  
+    <div class="card mb-3 shadow-sm" style="">
+      <div class="row card-body" style="">
+        <div class="col">
+          <img src="images/profile-pic.png" class="img-fluid rounded" style="float: left; padding-right: 10px; width: 250px;">
+        </div>
+        <div class="col" style="padding-left: 5px;">
+          <big style="font-weight: bold;">Marcus O. Silva</big><br>
+          <small class="text-muted">Sênior DS Manager no Quinto Andar e MSc em Economia</small><br>
+          <small> Sou um instrutor experiente em Data Science, com mais de 4 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech, eu sou o instrutor certo para você.</small>
+        </div>
+    </div>
+  
+    </div>
+  
+  </div>
+</div>
+<!-- Course About -->
+<div class="column-body-outset">
+<h2 style="text-align: center" class="anchored">
+Sobre o Curso
+</h2>
+<div class="grid">
+<div class="g-col-5">
+<p><strong>Para Quem é esse Curso?</strong></p>
+</div>
+<div class="g-col-7">
+<p><i class="bi bi-asterisk icon-purple"></i> Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte. <br> <i class="bi bi-asterisk icon-purple"></i> Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito. <br> <i class="bi bi-asterisk icon-purple"></i> Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. <br></p>
+</div>
+<div class="g-col-5">
+<p><strong>Pré-requisitos?</strong></p>
+</div>
+<div class="g-col-7">
+<p><i class="bi bi-check icon-purple"></i>Conhecimento de Python, incluindo Pandas e NumPy.<br> <i class="bi bi-check icon-purple"></i>Fundamentos básicos de aprendizado de máquina.<br></p>
+</div>
+</div>
+</div>
+<!-- Course outline -->
+<div class="column-body-outset">
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 1 - Processamento dos dados
+</div>
+</div>
+<div class="callout-body-container callout-body" style="border-left-color: #9A6EF8">
+<p><small> Learn: <br> - End-to-end overview of forecasting problems <br> - Making the most of Pandas for time-series data <br> - Finding signal in time-series data <br> - Overview of modeling approaches, from univariate to global <br> Build a category/store/state-level forecasting model for retail store sales: - Explore the data at the item level <br> - Discover the pros and cons of different types of models at different levels <br> - Decompose retail sales into components <br> </small></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 2 - Processamento dos dados
+</div>
+</div>
+<div class="callout-body-container callout-body" style="border-left-color: #9A6EF8">
+<p><small> <strong>Learn</strong> <br> - End-to-end overview of forecasting problems <br> - Making the most of Pandas for time-series data <br> - Finding signal in time-series data <br> - Overview of modeling approaches, from univariate to global <br> <strong>Build a category/store/state-level forecasting model for retail store sales</strong> - Explore the data at the item level <br> - Discover the pros and cons of different types of models at different levels <br> - Decompose retail sales into components <br> </small></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 3 - Processamento dos dados
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><small> <strong>Learn</strong> <br> - End-to-end overview of forecasting problems <br> - Making the most of Pandas for time-series data <br> - Finding signal in time-series data <br> - Overview of modeling approaches, from univariate to global <br> <strong>Build a category/store/state-level forecasting model for retail store sales</strong> - Explore the data at the item level <br> - Discover the pros and cons of different types of models at different levels <br> - Decompose retail sales into components <br> </small></p>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<!-- ARGUMENTS -->
+<div class="column-body">
+<div class="grid">
+<div class="g-col-1">
+
+</div>
+<div class="g-col-5">
+<strong>Projetos do mundo real</strong>
+<p style="font-size: 14px">
+Trabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho
+</p>
+</div>
+<div class="g-col-5">
+<p><img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;"></p>
+</div>
+<div class="g-col-1">
+
+</div>
+<div class="g-col-1">
+
+</div>
+<div class="g-col-5">
+<p><img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;"></p>
+</div>
+<div class="g-col-5">
+<strong>Acesso ao vivo</strong>
+<p style="font-size: 14px">
+Sessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.
+</p>
+</div>
+<div class="g-col-1">
+
+</div>
+</div>
+</div>
+<!-- QUESTIONS -->
+<div class="column-page">
+<h2 style="text-align: center" class="anchored">
+Perguntas Frequentes
+</h2>
+<div class="callout-warning callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is the time commitment for this course?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,200 @@
+---
+title: "Risco de Crédito com Machine Learning 🖐️ (EM BREVE!!)"
+format:
+  html:
+    page-layout: full
+    css: course.scss
+---
+
+<!-- https://icons.getbootstrap.com/icons/terminal/ -->
+
+
+:::{.column-page}
+:::{.columns}
+
+:::{.column width="65%"}
+
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="float: left; width: 70px" />
+
+<br><br> <h1>Credit Risk com Machine Learning (EM BREVE!!) 🖐️</h1>
+
+Time-series forecasting is one of the longest-standing applications of machine learning, and is one of the most prevalent techniques used across all of industry (if not the most prevalent). And yet, during the recent ML boom, forecasting has been somewhat left behind.
+
+The goal of this course is to marry the latest-and-greatest of the field of ML with the existing, classical statistical techniques. In particular, the focus of this course is the practical applications of these techniques, and how they supercharge applications such as causal analysis, demand intelligence, and labor planning
+
+<div class="row" style="max-width: 50%;">
+<div class="col">
+  <img src="../../images/profile-pic.png" class="img-fluid rounded-circle" style="float: left; margin: 5px; width: 60px;">
+</div>
+<div class="col" style="font-size: 12px; padding-top: 10px">
+**Marcus O. Silva**
+<p style="font-size: 10px;">Sr. DS Manager, Quinto Andar <br> MSc em Economia</p>
+</div>
+</div>
+
+:::
+
+:::{.column width="5%"}
+:::
+
+:::{.column width="30%"}
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush" style="font-size: 14px !important;">
+    <li class="list-group-item">
+      <i class="bi bi-terminal"></i>
+      Projetos realistas que ensinam habilidades da indústria.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-camera-video"></i>
+      Encontros ao vivo, 2x por semana, duração de 3 semanas.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-people"></i>
+      Aprenda junto com um pequeno grupo de colegas profissionais.
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem; $small-font-size;">
+<div class="card-body" style="width: 18rem; font-size: 12px;">
+PRÓXIMA TURMA (3 semanas)</br>
+**04 de abril**
+
+PREÇO (primeiro lote)</br>
+**R$ 990 (1500)**
+</div>
+</div>
+<br>
+<!-- <a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">INSCREVA-SE AGORA</a> -->
+<a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">EM BREVE</a>
+:::
+
+:::
+:::
+
+```{=html}
+<div class="column-screen"  style="background-color: #DFE6E9; padding: 10px;">
+
+  <p style="text-align: center; font-weight: bold; margin: 30px"
+    <big>Curso ensinado por um profissional<br>com vasta experiência na indústria!</big>
+  </p>
+  
+  <div class=".column-body" style="margin: 0 auto; width: 50%;">
+  
+    <div class="card mb-3 shadow-sm" style="">
+      <div class="row card-body" style="">
+        <div class="col">
+          <img src="../../images/profile-pic.png" class="img-fluid rounded" style="float: left; padding-right: 10px; width: 250px;">
+        </div>
+        <div class="col" style="padding-left: 5px;">
+          <big style="font-weight: bold;">Marcus O. Silva</big><br/>
+          <small class="text-muted">Sênior DS Manager no Quinto Andar e MSc em Economia</small><br/>
+          <small> Sou um instrutor experiente em Data Science, com mais de 4 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech, eu sou o instrutor certo para você.</small>
+        </div>
+    </div>
+  
+    </div>
+  
+  </div>
+</div>
+```
+
+<!-- Course About -->
+::: {.column-body-outset}
+<h2 style="text-align: center">Sobre o Curso</h2>
+::: {.grid}
+
+::: {.g-col-5}
+**Para Quem é esse Curso?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte. </br>
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito. </br>
+<i class="bi bi-asterisk icon-purple"></i> Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. </br>
+:::
+
+::: {.g-col-5}
+**Pré-requisitos?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-check icon-purple"></i>Conhecimento de Python, incluindo Pandas e NumPy.</br>
+<i class="bi bi-check icon-purple"></i>Fundamentos básicos de aprendizado de máquina.</br>
+:::
+:::
+:::
+
+
+
+<!-- Course outline -->
+::: {.column-body-outset}
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 1 - Processamento dos dados
+<small>
+
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 2 - 
+<small>
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple"}
+## <i class="bi bi-calendar"></i> Semana 3 -
+<small>
+</small>
+:::
+:::
+
+</br></br>
+
+<!-- ARGUMENTS -->
+::: {.column-body}
+::: {.grid}
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+**Projetos do mundo real**
+<p style="font-size: 14px">Trabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho </p>
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-1}
+:::
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-5}
+**Acesso ao vivo**
+<p style="font-size: 14px">Sessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.</p>
+:::
+::: {.g-col-1}
+:::
+
+
+:::
+:::
+
+
+
+<!-- QUESTIONS -->
+::: {.column-page}
+
+<h2 style="text-align: center">Perguntas Frequentes</h2>
+
+::: {.callout-warning icon=false appearance="minimal" collapse=true"}
+## Qual é o compromisso de tempo para este curso?
+:::
+
+:::
+

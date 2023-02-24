@@ -1,0 +1,9 @@
+---
+title: "Cursos"
+listing:
+  contents: courses
+  type: grid 
+  sort: 'date desc'
+title-block-banner: true
+---
+
