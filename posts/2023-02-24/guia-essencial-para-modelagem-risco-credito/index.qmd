@@ -171,7 +171,7 @@ Atualmente, os métodos de Aprendizado de Máquina (ML) são fundamentais na cri
 - **Monitoramento**: após a implantação, é importante monitorar a performance e estabilidade do modelo, a fim de garantir que ele esteja funcionando de maneira adequada. Nessa etapa podem ser analisado o desempenho em métricas como conversão, indicadores de curto prazo de inadimplência (ever30mob3) ou indicadores de estabilidade do modelo.
 - **Re-treino**: caso necessário, o modelo pode ser re-treinado, atualizando o dataset de treino com pontos mais recentes, a fim de melhorar sua performance. Importante destacar a necessidade de cautela em re-treinos automáticos, já que eles podem mudar o apatite de risco da política de crédito vigente.
 
-## Exemplo de decisões de crédito baseada no ROI
+## Exemplo de decisões de crédito baseadas no ROI
 
 O ROI (retorno sobre o investimento) é uma medida financeira que permite comparar o valor do capital investido com o valor esperado de retorno de um empréstimo. Ele pode ser utilizado para tomar decisões de crédito, pois permite comparar o valor esperado de um empréstimo com o valor do capital investido.
 
@@ -189,7 +189,7 @@ Para criar uma política de crédito, é necessário ter um score de crédito. E
 
 A calibração do score de crédito para a probabilidade de default pode ser feita pelo método dos percentis. Esse método consiste em clusterizar a população em grupos de acordo com o seu score de crédito. Em seguida, usando um conjunto de dados fora da amostra, é computado o default observado da amostra em cada um desses grupos, essas probabilidades observadas de cada grupo são usadas como a inadimplência esperada. Esses grupos podem ser chamados de categorias de risco ou faixas de risco.
 
-A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.
+A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para finalmente computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.
 
 | Score de crédito (ever15mob3) | Faixa de risco | Percentual de defaults (ever60mob12) | EAD | LGD |
 | --- | --- |----------------| --- | --- |

@@ -116,9 +116,6 @@ cookieconsent.run({
   <li class="nav-item">
     <a class="nav-link" href="../../../index.html">Sobre</a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../courses.html">Cursos</a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://linkedin.com/in/marcuos/"><i class="bi bi-linkedin" role="img">
 </i> 
@@ -464,7 +461,7 @@ cookieconsent.run({
 <p>A política de crédito consiste em um conjunto de critérios e limites utilizados para tomar decisões de crédito. Ela é definida com base em vários fatores, como o perfil do mutuário, o tipo de empréstimo, o montante emprestado, a garantia oferecida e o histórico de crédito do mutuário. Além disso, a política de crédito é definida de acordo com o objetivo atual da empresa. Se a empresa estiver focada em expansão (conseguir mais clientes), ela terá uma política mais flexível. Se o foco for a rentabilidade, por consequência, será criada uma política mais restritiva.</p>
 <p>Para criar uma política de crédito, é necessário ter um score de crédito. Esse score pode ser um score de mercado ou um score interno, e deve ser calibrado para representar uma definição de default adequada ao problema específico daquela política. Por exemplo, um score interno pode ter sido treinado no ever15mob3 (um target bem curto) para ter dados mais recentes, mas a política de crédito precisa ser criada a partir de um conceito de longo prazo, como, por exemplo, um <strong>ever60mob12</strong> para refletir um default de verdade.</p>
 <p>A calibração do score de crédito para a probabilidade de default pode ser feita pelo método dos percentis. Esse método consiste em clusterizar a população em grupos de acordo com o seu score de crédito. Em seguida, usando um conjunto de dados fora da amostra, é computado o default observado da amostra em cada um desses grupos, essas probabilidades observadas de cada grupo são usadas como a inadimplência esperada. Esses grupos podem ser chamados de categorias de risco ou faixas de risco.</p>
-<p>A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.</p>
+<p>A política de crédito deve ser estabelecida de maneira a maximizar o objetivo de negócio da empresa. No caso abaixo a política consiste em usar as probabilidades calibradas (a partir de um score treinado em uma target curta) para prever a PD de um ever60mob12. E com isso computar a perda esperada para finalmente computar o ROI esperado do empréstimo, se esse ROI for maior do que 7.5% o empréstimo será concedido.</p>
 <table class="table">
 <caption>Inputs para a política de crédito</caption>
 <colgroup>
