@@ -1,94 +1,10 @@
 [
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Bem-vindo ao FintechScientist 🖐️",
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Cursos",
     "section": "",
-    "text": "Quer saber como aplicar o Isolation Forest para detecção de fraudes?\n\n\n\n\n\n\n\nDetecção de Fraude\n\n\nMachine Learning\n\n\n\n\nAprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!\n\n\n\n\n\n\n5 de mar. de 2023\n\n\nMarcus O. Silva\n\n\n\n\n\n\n  \n\n\n\n\nO Guia Essencial para Modelagem de Risco de Crédito\n\n\n\n\n\n\n\nModelagem de Crédito\n\n\nMachine Learning\n\n\n\n\nEntenda os principais conceitos na modelagem de risco de crédito. E saiba como ela pode ser otimizada com machine learning!\n\n\n\n\n\n\n24 de fev. de 2023\n\n\nMarcus O. Silva\n\n\n\n\n\n\n  \n\n\n\n\nO que é a Probabilidade de Inadimplência (PD)?\n\n\n\n\n\n\n\nModelagem de Crédito\n\n\nTeoria\n\n\n\n\n\n\n\n\n\n\n\n11 de dez. de 2022\n\n\nMarcus O. da Silva\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?\n\n\nAprenda a intuição por trás do algoritmo e entenda sua aplicação para detecção de fraudes em cartões\n\n\n\n\n\n\nApr 2, 2024\n\n\nMarcus O. Silva\n\n\n\n\n\n\n\n\nBuscando os indicadores macroeconômicos do Bacen em python\n\n\n\n\n\n\n\n\n\nDec 10, 2022\n\n\nMarcus O. Silva\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
-    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
-    "title": "FintechScientist",
-    "section": "",
-    "text": "Plot dos Indicadores macroeconômicos\n\n\n\n\n\n\n\n\nwww.fintechscientist.com (por Marcus Silva)"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "1. Aprenda a intuição por trás do algoritmo: Isolation Forest\n\n\n\n🕵️ Anomalias são mais fáceis de isolar do que observações normais\n🌳 O modelo cria árvores de decisão que dividem os dados aleatoriamente com base nos valores das features\n🟣 Anomalias requerem menos divisões (ramos da árvore) para serem isoladas (chegar ao nó folha)\n⚪ Valores normais requerem mais divisões para serem isolados"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-1",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-1",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "1. Aprenda a intuição por trás do algoritmo: Isolation Forest\n\n\n\n➗ Quanto menor o número de divisões necessárias para isolar um ponto, maior será seu score de anomalia.\n🤖 No sklearn esse score varia de -1 (anomalia) a 1 (normal).\n⏸️ É semelhante ao random-forest, mas se trata de um algoritmo não supervisionado\n⚖️ Aplicado em problemas bem desbalanceados (ex: 0.1% de desbalanceamento)\n✖️ Ou quando não existem exemplos rotulados (não supervisionado)"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-2",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-2",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "2. Descubra como o isolation forest pode ser aplicado para detectar fraudes em cartões\n\n\n\n Problema: como identificar transações fraudulentas de cartões de crédito  ?\n❌ Queremos decidir se uma transação deve ser bloqueada,\n⚠️ Se deve ser gerado apenas um aviso de suspeita de fraude\n✅ Ou, se a transação deve ser liberada\n🌳 Fraudes são difíceis de rotular, pode não haver exemplos de fraudes\n⚙️ Por isso a importância de um modelo não supervisionado\n📋 Ao lado a descrição do dataset de exemplo (link do dataset)\n\n\n\n\n\nField name\nType\n\n\n\n\ntransaction_amount\nnumber\n\n\ninstallments\ninteger\n\n\nlogin_attempts_last_12h\ninteger\n\n\ntotal_of_last_1h_transactions\nnumber\n\n\nmerchant_id\nstring\n\n\ntime_of_day\nstring\n\n\nlocation\nstring"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-3",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-3",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "3. Treinando o isolation forest\nAgora vamos treinar o isolation forest usando os dados de transações, primeiros vamos importar as libs e carregar o nosso dataset:\n\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.preprocessing import OneHotEncoder\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load the synthetic credit card transactions dataset\n# Dataset link: https://www.kaggle.com/datasets/marcusos/synthetic-fraud-detection\ndf = pd.read_csv('data/transactions.csv')\n\n# numerical variables\nnumerical_cols = ['transaction_amount', 'installments', 'login_attempts_last_12h', 'total_of_last_1h_transactions']\n\n# One-hot encode the categorical variables\ncategorical_cols = [\"merchant_id\", \"location\", \"time_of_day\"]\n\nfeatures = numerical_cols + categorical_cols\ndf[features].head()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntransaction_amount\ninstallments\nlogin_attempts_last_12h\ntotal_of_last_1h_transactions\nmerchant_id\nlocation\ntime_of_day\n\n\n\n\n0\n149.906\n1\n1\n0\nB\nUSA\nafternoon\n\n\n1\n562.798\n1\n0\n2\nA\nUSA\nmorning\n\n\n2\n86.064\n1\n1\n1\nB\nCanada\nafternoon\n\n\n3\n571.313\n1\n2\n0\nC\nUSA\nafternoon\n\n\n4\n1146.57\n1\n2\n2\nA\nCanada\nmorning"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-4",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-4",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "3. Treinando o isolation forest\nAgora vamos pre-processar o dataset (tratando as categóricas) e por fim fitar o IsolationForest\n\n# Enconding categorical variables using OneHotEncoder\nonehot_encoder = OneHotEncoder(sparse_output=False)\nonehot_encoded = onehot_encoder.fit_transform(df[categorical_cols])\ndf_encoded = pd.concat([df[numerical_cols], pd.DataFrame(onehot_encoded)], axis=1)\n\n# Train the isolation forest model\nclf = IsolationForest(random_state=42)\nclf.fit(df_encoded.values)\n\n# Make predictions on the data\npreds = clf.decision_function(df_encoded.values)"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-5",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-5",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "3. Treinando o isolation forest: verificando o resultado\n\n\n\n📈 Ao lado temos o plot do score de anomalia versus o valor da transação.\n➗ É possível observar que o modelo consegue separar razoavelmente as anomalias (fraudes).\n➗ Entre -0.10 e -0.15, o modelo já encontra algumas fraudes, mas ainda pode errar bastante (falsos positivos)\n➗ Porém, abaixo do score -0.15, o modelo consegue identificar bem os casos anômalos"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "FintechScientist",
-    "section": "",
-    "text": "Bem-vindo ao FintechScientist 👋\n\n\nOlá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar, professor e guitarreiro nas horas vagas!\n\n Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\nComece a aplicar Machine Learning e Data Science para:\n\nModelagem de risco e crédito\nChurn\nFinanças\nEconomia\nFraude\n\n\nTudo isso com exemplos claros e práticos!\n\nNesse site você encontrará conteúdos que irão acelerar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nPostagens bissemanais!\n\n \n  \n   \n  \n    \n     LinkedIn\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-6",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-6",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "4. Um sistema antifraude usando o isolation forest\n\n\n\n⚠️ Podemos usar o range de -0.10 até -0.15 para gerar alertas de fraude.\n❌ Podemos usar o range de -0.15 até -1 para bloquear transações.\n🔢 Usando -0.15 como ponto de corte para bloqueio, o modelo teria 45% de recall\n🤌 Ou seja, ele conseguiria bloquear 45% das transações fraudulentas\n🌲 Ao utilizar o isolation forest é possível criar um sistema antifraude robusto e eficaz."
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-7",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-7",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "4. Um sistema antifraude usando o isolation forest\n\n\n\nSegue um diagram ilustrando a apliação do modelo treinado em um sistema antifraude"
-  },
-  {
-    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-8",
-    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-8",
-    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
-    "section": "",
-    "text": "5. Vantagens e Desvatagens do isolation forest\n\n\n👍 Vantagens\n\nConsegue lidar com alta dimensionalidade (alto número de features)\nNão exige conhecimento prévio da distribuição dos dados.\nReduz o overfitting por usar multiplas árvores de decisão\nEscalável, algoritmo rápido, com complexidade linear\nNão precisa de um label\n\n\n👎 Desvatagens\n\nPode ter problemas com dados muito esparsos ou discrepantes\nDificuldade em lidar com categóricos de alta cardinalidade (muitas categorias)\nInterpretabilidade limitada: Isolation Forest é um algoritmo de black-box\nNecessidade de especificar alguns hiperparâmetros"
+    "text": "Risco de Crédito com Machine Learning 🖐️ (EM BREVE!!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html",
@@ -147,6 +63,13 @@
     "text": "Conclusão\nEste artigo apresentou um guia essencial para modelagem de risco de crédito, começando pela definição de risco de crédito e suas principais regulações, como a Basileia e o IRB-A. Foram apresentadas medidas e métricas fundamentais da análise de crédito, como a perda esperada, a probabilidade de default, a exposição no momento do default e a perda esperada em caso de default. Além disso, foi explorado o conceito de credit scoring e score card como uma forma de avaliar o risco de crédito e tomar decisões de crédito. Em conjunto, essas técnicas e ferramentas permitem a criação e adoção de políticas de crédito mais efetivas e precisas, ajudando as instituições financeiras a tomar decisões mais informadas e a reduzir o risco de inadimplência."
   },
   {
+    "objectID": "posts/o-que-e-probabilidade-de-inad/index.html",
+    "href": "posts/o-que-e-probabilidade-de-inad/index.html",
+    "title": "O que é a Probabilidade de Inadimplência (PD)?",
+    "section": "",
+    "text": "A probabilidade de inadimplência (probability of default ou PD) é um conceito importante em modelagem de risco de crédito. É a probabilidade de que um tomador de empréstimo não consiga honrar seu empréstimo. Em outras palavras, é a probabilidade de que o tomador de empréstimo não consiga fazer os pagamentos necessários em seu empréstimo.\nA PD é uma medida importante para bancos e outros credores, pois ajuda a avaliar o risco de emprestar dinheiro a um determinado tomador de empréstimo. Uma PD mais alta indica um risco maior de inadimplência e, portanto, uma maior probabilidade de que o credor não possa recuperar o valor total de seu empréstimo. Como resultado, os credores geralmente exigem taxas de juros mais altas ou mais garantias de empréstimos com uma PD mais alta. Um novo pedido pode ser negado dependendo de quão alta é a PD desse pedido.\n\nA PD é geralmente estimada usando modelos estatísticos que incorporam uma variedade de fatores, como o score de crédito do tomador de empréstimo, renda e a relação dívida/renda. Esses modelos são projetados para prever a probabilidade de inadimplência com base em dados históricos, perfil do tomador e outras informações relevantes. O código abaixo ilustra em python como é a criação de um modelo de PD.\n\n# Import the LogisticRegression class from the sklearn library\nfrom sklearn.linear_model import LogisticRegression\nimport pandas as pd\n\n# Read the data\ndf = pd.read_csv('<path_to_default_dataset>')\n\n# Define the features of the dataset\nfeatures = [\"income\", \"age\", \"payment_delays\", \"credit_score\"]\nlabel = 'default'\n\n# Define the input and the label\nX = df[features]\ny = df[label]\n\n# Create a logistic regression model\nmodel = LogisticRegression()\n\n# Train the model on our sample dataset\nmodel.fit(X, y)\n\n# Use the model to predict the probability of default for new data\npredictions = model.predict_proba(X_new)\n\nEm geral, a probabilidade de inadimplência é uma medida crucial na modelagem de risco de crédito que ajuda os credores a avaliar o risco associado a emprestar dinheiro a um determinado tomador de empréstimo. A forma mais comum de resolver esse tipo de problema é atráves de algum algóritmo de classificação como a regressão logística."
+  },
+  {
     "objectID": "posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
     "href": "posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
     "title": "Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
@@ -154,18 +77,123 @@
     "text": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?\nAo final desse post em formato de slide você terá passado pelos seguintes pontos:\n\nAprenda a intuição por trás do algoritmo isolation forest 🌲!\nDescubra como o isolation forest pode ser aplicado para detectar fraudes em cartões\nTreinando o isolation forest\nUm sistema antifraude usando o isolation forest\nVeja as vatagens e desvatagens do isolation forest\n\nVocê já ouviu falar do algoritmo isolation forest? Ele é uma técnica de detecção de anomalias robusta. O isolation forest se baseia na ideia de que as anomalias são mais facilmente isoladas do que as observações normais em um conjunto de dados. E o melhor de tudo, é muito fácil de entender como ele funciona!\nO isolation forest funciona selecionando aleatoriamente uma feature e um valor de divisão para cada árvore de decisão e dividindo recursivamente os dados em subconjuntos menores com base na feature e no valor da divisão. Esse processo continua até que cada data point seja isolado em seu próprio nó folha.\nA profundidade da árvore necessária para isolar um ponto é uma medida da anormalidade do ponto. O algoritmo da floresta de isolamento atribui uma pontuação de anomalia a cada ponto de dados com base na profundidade média das árvores necessárias para isolar o ponto.\n\n\n\nAbrir o slide"
   },
   {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?\n\n\nAprenda a intuição do algoritmo por meio de uma aplicação para detecção de fraudes em 5 passos\n\n\n\n\n\n\nApr 2, 2024\n\n\nMarcus O. Silva\n\n\n\n\n\n\n\n\nBuscando os indicadores macroeconômicos do Bacen em python\n\n\n\n\n\n\n\n\n\nDec 10, 2022\n\n\nMarcus O. Silva\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "credit_risk_landing_page.html",
+    "href": "credit_risk_landing_page.html",
+    "title": "Risco de Crédito com Machine Learning 🖐️",
+    "section": "",
+    "text": "Credit Risk com Machine Learning\n\nTime-series forecasting is one of the longest-standing applications of machine learning, and is one of the most prevalent techniques used across all of industry (if not the most prevalent). And yet, during the recent ML boom, forecasting has been somewhat left behind.\nThe goal of this course is to marry the latest-and-greatest of the field of ML with the existing, classical statistical techniques. In particular, the focus of this course is the practical applications of these techniques, and how they supercharge applications such as causal analysis, demand intelligence, and labor planning\n\n\n\n\n\nMarcus O. Silva\n\nSr. DS Manager, Quinto Andar  MSc em Economia\n\n\n\n\n\n\n\n\n\n Projetos realistas que ensinam habilidades da indústria.\n\n\n Encontros ao vivo, 2x por semana, duração de 3 semanas.\n\n\n Aprenda junto com um pequeno grupo de colegas profissionais.\n\n\n\n\n\n\nPRÓXIMA TURMA (3 semanas) 04 de abril\nPREÇO (primeiro lote) R$ 990 (1500)\n\n\n INSCREVA-SE AGORA\n\n\n\n\n\n  Curso ensinado por um profissionalcom vasta experiência na indústria!\n  \n  \n  \n  \n    \n      \n        \n          \n        \n        \n          Marcus O. Silva\n          Sênior DS Manager no Quinto Andar e MSc em Economia\n           Sou um instrutor experiente em Data Science, com mais de 4 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio \"commit de ouro\" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech, eu sou o instrutor certo para você.\n        \n    \n  \n    \n  \n  \n\n\n\n\nSobre o Curso\n\n\n\nPara Quem é esse Curso?\n\n\n Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte.   Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito.   Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. \n\n\nPré-requisitos?\n\n\nConhecimento de Python, incluindo Pandas e NumPy. Fundamentos básicos de aprendizado de máquina.\n\n\n\n\n\n\n\n\n\n\n\n Semana 1 - Processamento dos dados\n\n\n\n Learn:  - End-to-end overview of forecasting problems  - Making the most of Pandas for time-series data  - Finding signal in time-series data  - Overview of modeling approaches, from univariate to global  Build a category/store/state-level forecasting model for retail store sales: - Explore the data at the item level  - Discover the pros and cons of different types of models at different levels  - Decompose retail sales into components  \n\n\n\n\n\n\n\n\n Semana 2 - Processamento dos dados\n\n\n\n Learn  - End-to-end overview of forecasting problems  - Making the most of Pandas for time-series data  - Finding signal in time-series data  - Overview of modeling approaches, from univariate to global  Build a category/store/state-level forecasting model for retail store sales - Explore the data at the item level  - Discover the pros and cons of different types of models at different levels  - Decompose retail sales into components  \n\n\n\n\n\n\n\n\n Semana 3 - Processamento dos dados\n\n\n\n Learn  - End-to-end overview of forecasting problems  - Making the most of Pandas for time-series data  - Finding signal in time-series data  - Overview of modeling approaches, from univariate to global  Build a category/store/state-level forecasting model for retail store sales - Explore the data at the item level  - Discover the pros and cons of different types of models at different levels  - Decompose retail sales into components  \n\n\n\n\n\n\n\n\n\n\n\nProjetos do mundo real\n\nTrabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcesso ao vivo\n\nSessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.\n\n\n\n\n\n\n\n\n\n\nPerguntas Frequentes\n\n\n\n\n\n\n\nWhat is the time commitment for this course?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FintechScientist",
+    "section": "",
+    "text": "Bem-vindo ao FintechScientist 👋\n\n\nOlá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar, professor e guitarreiro nas horas vagas!\n\n Aqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\nComece a aplicar Machine Learning e Data Science para:\n\nModelagem de risco e crédito\nChurn\nFinanças\nEconomia\nFraude\n\n\nTudo isso com exemplos claros e práticos!\n\nNesse site você encontrará conteúdos que irão acelerar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nPostagens bissemanais!\n\n \n  \n   \n  \n    \n     LinkedIn\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Bem-vindo ao FintechScientist 👋",
+    "section": "",
+    "text": "Olá! Sou o Marcus O. Silva, desenvolvedor, mestre em economia, manager de ciência de dados no QuintoAndar e professor nas horas vagas!\n\nAqui vou te ajudar a ser um Cientista de Dados RockStar em fintech.\n\n{css echo=FALSE} .column { text-align: center; }\nComece a aplicar Machine Learning e Data Science para análise de risco, churn, finanças, economics e fraude. Com exemplos práticos!\nNesse site você vai encontrar conteúdos que irão acelar a sua carreira, quero torná-lo incrível na aplicação de ciência de dados para fintech:\n\nDicas práticas de um profissional com vasta experiência na indústria\nSem muito matematiquês e com muito código\nTutorias e postagens semanais\n\n \n  \n   \n  \n    \n     Twitter\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Github"
+  },
+  {
+    "objectID": "courses/credit_risk_com_ml/credit_risk_landing_page.html",
+    "href": "courses/credit_risk_com_ml/credit_risk_landing_page.html",
+    "title": "Risco de Crédito com Machine Learning 🖐️ (EM BREVE!!)",
+    "section": "",
+    "text": "Credit Risk com Machine Learning (EM BREVE!!) 🖐️\n\nTime-series forecasting is one of the longest-standing applications of machine learning, and is one of the most prevalent techniques used across all of industry (if not the most prevalent). And yet, during the recent ML boom, forecasting has been somewhat left behind.\nThe goal of this course is to marry the latest-and-greatest of the field of ML with the existing, classical statistical techniques. In particular, the focus of this course is the practical applications of these techniques, and how they supercharge applications such as causal analysis, demand intelligence, and labor planning\n\n\n\n\n\nMarcus O. Silva\n\nSr. DS Manager, Quinto Andar  MSc em Economia\n\n\n\n\n\n\n\n\n\n Projetos realistas que ensinam habilidades da indústria.\n\n\n Encontros ao vivo, 2x por semana, duração de 3 semanas.\n\n\n Aprenda junto com um pequeno grupo de colegas profissionais.\n\n\n\n\n\n\nPRÓXIMA TURMA (3 semanas) 04 de abril\nPREÇO (primeiro lote) R$ 990 (1500)\n\n\n  EM BREVE\n\n\n\n\n\n  Curso ensinado por um profissionalcom vasta experiência na indústria!\n  \n  \n  \n  \n    \n      \n        \n          \n        \n        \n          Marcus O. Silva\n          Sênior DS Manager no Quinto Andar e MSc em Economia\n           Sou um instrutor experiente em Data Science, com mais de 4 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio \"commit de ouro\" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech, eu sou o instrutor certo para você.\n        \n    \n  \n    \n  \n  \n\n\n\n\nSobre o Curso\n\n\n\nPara Quem é esse Curso?\n\n\n Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte.   Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito.   Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. \n\n\nPré-requisitos?\n\n\nConhecimento de Python, incluindo Pandas e NumPy. Fundamentos básicos de aprendizado de máquina.\n\n\n\n\n\n\n\n\n\n\n\n Semana 1 - Processamento dos dados\n\n\n\n\n\n\n\n\n\n\n\n\n\n Semana 2 -\n\n\n\n \n\n\n\n\n\n\n\n\n Semana 3 -\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nProjetos do mundo real\n\nTrabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcesso ao vivo\n\nSessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.\n\n\n\n\n\n\n\n\n\n\nPerguntas Frequentes\n\n\n\n\n\n\n\nQual é o compromisso de tempo para este curso?"
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
-    "title": "",
+    "title": "FintechScientist",
     "section": "",
     "text": "() ### References * Quarto Tips * The ultimate guide to starting a Quarto blog * How to publish a Quarto Blog * Creating a Blog With Quarto * Blog that has Credit Risk Modeling Posts * Example of an online course to get inspired"
   },
   {
     "objectID": "references.html#synthetic-data-generator",
     "href": "references.html#synthetic-data-generator",
-    "title": "",
+    "title": "FintechScientist",
     "section": "Synthetic data generator",
     "text": "Synthetic data generator\n\nSDV\nLib to Generating synth date\nQuarto page about revealsj slides\nHow to convert revealjs to PDF: use ?print-pdf"
+  },
+  {
+    "objectID": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
+    "href": "presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html#section",
+    "title": "FintechScientist",
+    "section": "",
+    "text": "Plot dos Indicadores macroeconômicos\n\n\n\n\n\n\n\n\nwww.fintechscientist.com (por Marcus Silva)"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "1. Aprenda a intuição por trás do algoritmo: Isolation Forest\n\n\n\n🕵️ Anomalias são mais fáceis de isolar do que observações normais\n🌳 O modelo cria árvores de decisão que dividem os dados aleatoriamente com base nos valores das features\n🟣 Anomalias requerem menos divisões (ramos da árvore) para serem isoladas (chegar ao nó folha)\n⚪ Valores normais requerem mais divisões para serem isolados"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-1",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-1",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "1. Aprenda a intuição por trás do algoritmo: Isolation Forest\n\n\n\n➗ Quanto menor o número de divisões necessárias para isolar um ponto, maior será seu score de anomalia.\n🤖 No sklearn esse score varia de -1 (anomalia) a 1 (normal).\n⏸️ É semelhante ao random-forest, mas se trata de um algoritmo não supervisionado\n⚖️ Aplicado em problemas bem desbalanceados (ex: 0.1% de desbalanceamento)\n✖️ Ou quando não existem exemplos rotulados (não supervisionado)"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-2",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-2",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "2. Descubra como o isolation forest pode ser aplicado para detectar fraudes em cartões\n\n\n\n Problema: como identificar transações fraudulentas de cartões de crédito  ?\n❌ Queremos decidir se uma transação deve ser bloqueada,\n⚠️ Se deve ser gerado apenas um aviso de suspeita de fraude\n✅ Ou, se a transação deve ser liberada\n🌳 Fraudes são difíceis de rotular, pode não haver exemplos de fraudes\n⚙️ Por isso a importância de um modelo não supervisionado\n📋 Ao lado a descrição do dataset de exemplo (link do dataset)\n\n\n\n\n\nField name\nType\n\n\n\n\ntransaction_amount\nnumber\n\n\ninstallments\ninteger\n\n\nlogin_attempts_last_12h\ninteger\n\n\ntotal_of_last_1h_transactions\nnumber\n\n\nmerchant_id\nstring\n\n\ntime_of_day\nstring\n\n\nlocation\nstring"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-3",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-3",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "3. Treinando o isolation forest\nAgora vamos treinar o isolation forest usando os dados de transações, primeiros vamos importar as libs e carregar o nosso dataset:\n\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.preprocessing import OneHotEncoder\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load the synthetic credit card transactions dataset\n# Dataset link: https://www.kaggle.com/datasets/marcusos/synthetic-fraud-detection\ndf = pd.read_csv('data/transactions.csv')\n\n# numerical variables\nnumerical_cols = ['transaction_amount', 'installments', 'login_attempts_last_12h', 'total_of_last_1h_transactions']\n\n# One-hot encode the categorical variables\ncategorical_cols = [\"merchant_id\", \"location\", \"time_of_day\"]\n\nfeatures = numerical_cols + categorical_cols\ndf[features].head()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntransaction_amount\ninstallments\nlogin_attempts_last_12h\ntotal_of_last_1h_transactions\nmerchant_id\nlocation\ntime_of_day\n\n\n\n\n0\n149.906\n1\n1\n0\nB\nUSA\nafternoon\n\n\n1\n562.798\n1\n0\n2\nA\nUSA\nmorning\n\n\n2\n86.064\n1\n1\n1\nB\nCanada\nafternoon\n\n\n3\n571.313\n1\n2\n0\nC\nUSA\nafternoon\n\n\n4\n1146.57\n1\n2\n2\nA\nCanada\nmorning"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-4",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-4",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "3. Treinando o isolation forest\nAgora vamos pre-processar o dataset (tratando as categóricas) e por fim fitar o IsolationForest\n\n# Enconding categorical variables using OneHotEncoder\nonehot_encoder = OneHotEncoder(sparse_output=False)\nonehot_encoded = onehot_encoder.fit_transform(df[categorical_cols])\ndf_encoded = pd.concat([df[numerical_cols], pd.DataFrame(onehot_encoded)], axis=1)\n\n# Train the isolation forest model\nclf = IsolationForest(random_state=42)\nclf.fit(df_encoded.values)\n\n# Make predictions on the data\npreds = clf.decision_function(df_encoded.values)"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-5",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-5",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "3. Treinando o isolation forest: verificando o resultado\n\n\n\n📈 Ao lado temos o plot do score de anomalia versus o valor da transação.\n➗ É possível observar que o modelo consegue separar razoavelmente as anomalias (fraudes).\n➗ Entre -0.10 e -0.15, o modelo já encontra algumas fraudes, mas ainda pode errar bastante (falsos positivos)\n➗ Porém, abaixo do score -0.15, o modelo consegue identificar bem os casos anômalos"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-6",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-6",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "4. Um sistema antifraude usando o isolation forest\n\n\n\n⚠️ Podemos usar o range de -0.10 até -0.15 para gerar alertas de fraude.\n❌ Podemos usar o range de -0.15 até -1 para bloquear transações.\n🔢 Usando -0.15 como ponto de corte para bloqueio, o modelo teria 45% de recall\n🤌 Ou seja, ele conseguiria bloquear 45% das transações fraudulentas\n🌲 Ao utilizar o isolation forest é possível criar um sistema antifraude robusto e eficaz."
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-7",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-7",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "4. Um sistema antifraude usando o isolation forest\n\n\n\nSegue um diagram ilustrando a apliação do modelo treinado em um sistema antifraude"
+  },
+  {
+    "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-8",
+    "href": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-8",
+    "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
+    "section": "",
+    "text": "5. Vantagens e Desvatagens do isolation forest\n\n\n👍 Vantagens\n\nConsegue lidar com alta dimensionalidade (alto número de features)\nNão exige conhecimento prévio da distribuição dos dados.\nReduz o overfitting por usar multiplas árvores de decisão\nEscalável, algoritmo rápido, com complexidade linear\nNão precisa de um label\n\n\n👎 Desvatagens\n\nPode ter problemas com dados muito esparsos ou discrepantes\nDificuldade em lidar com categóricos de alta cardinalidade (muitas categorias)\nInterpretabilidade limitada: Isolation Forest é um algoritmo de black-box\nNecessidade de especificar alguns hiperparâmetros"
   },
   {
     "objectID": "presentations/isolation_forest_fraude/isolation_forest_fraude.html#section-9",
@@ -173,5 +201,12 @@
     "title": "🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?",
     "section": "",
     "text": "Achou esse conteúdo útil?\n\n\nMe ajude dando o seu like, comentando ou compartilhando essa publicação. Sua opinião é importante para mim! ❤️👍\n\n\n\n\n\n\nwww.fintechscientist.com"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Bem-vindo ao FintechScientist 🖐️",
+    "section": "",
+    "text": "Quer saber como aplicar o Isolation Forest para detecção de fraudes?\n\n\n\n\n\n\n\nDetecção de Fraude\n\n\nMachine Learning\n\n\n\n\nAprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!\n\n\n\n\n\n\n5 de mar. de 2023\n\n\nMarcus O. Silva\n\n\n\n\n\n\n  \n\n\n\n\nO Guia Essencial para Modelagem de Risco de Crédito\n\n\n\n\n\n\n\nModelagem de Crédito\n\n\nMachine Learning\n\n\n\n\nEntenda os principais conceitos na modelagem de risco de crédito. E saiba como ela pode ser otimizada com machine learning!\n\n\n\n\n\n\n24 de fev. de 2023\n\n\nMarcus O. Silva\n\n\n\n\n\n\n  \n\n\n\n\nO que é a Probabilidade de Inadimplência (PD)?\n\n\n\n\n\n\n\nModelagem de Crédito\n\n\nTeoria\n\n\n\n\n\n\n\n\n\n\n\n11 de dez. de 2022\n\n\nMarcus O. da Silva\n\n\n\n\n\n\nNenhum item correspondente"
   }
 ]

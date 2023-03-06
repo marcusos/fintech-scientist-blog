@@ -1,10 +1,8 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/courses.html",
     "items": [
-      "/posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
-      "/posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html",
-      "/posts/o-que-e-probabilidade-de-inad/index.html"
+      "/courses/credit_risk_com_ml/credit_risk_landing_page.html"
     ]
   },
   {
@@ -12,6 +10,14 @@
     "items": [
       "/presentations/isolation_forest_fraude/isolation_forest_fraude.html",
       "/presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
+      "/posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html",
+      "/posts/o-que-e-probabilidade-de-inad/index.html"
     ]
   }
 ]

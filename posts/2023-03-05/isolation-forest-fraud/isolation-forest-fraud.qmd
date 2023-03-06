@@ -5,6 +5,7 @@ categories: [Detecção de Fraude, Machine Learning]
 image: model_result_decision.png
 description: Aprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!
 slide-format: revealjs
+
 ---
 
 🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?
