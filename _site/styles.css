@@ -6,8 +6,15 @@
     padding-right: 6px;
 }
 
-
 .c-center-bold {
   text-align: center;
   font-weight: bold;
+}
+
+.navbar-title {
+  display: none;
+}
+
+.nav-link.active {
+    color: #6a38d4 !important;
 }

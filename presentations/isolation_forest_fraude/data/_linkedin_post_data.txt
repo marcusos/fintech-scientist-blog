@@ -1,0 +1,11 @@
+🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?
+
+1. Aprenda a intuição por trás do algoritmo isolation forest 🌲!
+2. Descubra como o isolation forest pode ser aplicado para detectar fraudes em cartões
+3. Treinando o isolation forest
+4. Um sistema antifraude usando o isolation forest
+5. Veja as vatagens e desvatagens do isolation forest
+
+Você já ouviu falar do algoritmo isolation forest? Ele é uma técnica de detecção de anomalias robusta. O isolation forest se baseia na ideia de que as anomalias são mais facilmente isoladas do que as observações normais em um conjunto de dados. E o melhor de tudo, é muito fácil de entender como ele funciona!
+
+O isolation forest funciona selecionando aleatoriamente uma feature e um valor de divisão para cada árvore de decisão e dividindo recursivamente os dados em subconjuntos menores com base na feature e no valor da divisão. Esse processo continua até que cada data point seja isolado em seu próprio nó folha. A profundidade da árvore necessária para isolar um ponto é uma medida da anormalidade do ponto. O algoritmo da floresta de isolamento atribui uma pontuação de anomalia a cada ponto de dados com base na profundidade média das árvores necessárias para isolar o ponto.

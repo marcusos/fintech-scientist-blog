@@ -1,0 +1,56 @@
+{
+  "title": "Synthetic Fraud Detection Dataset",
+  "description": "A synthetic anomaly detection dataset for a fraud use case. This dataset is useful to train and test machine learning models designed to identify fraudulent credit card transactions. The target here is the is_anomaly variable, and it is very unbalanced, representing 1% of the samples.",
+  "id": "marcusos/synthetic-fraud-detection",
+  "licenses": [{"name": "CC0-1.0"}],
+  "resources": [
+    {
+      "name": "transactions",
+      "path": "transactions.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "transaction_amount",
+            "type": "number",
+            "description": "The amount of the transaction in the local currency."
+          },
+          {
+            "name": "installments",
+            "type": "integer",
+            "description": "The number of installments the transaction was divided into."
+          },
+          {
+            "name": "login_attempts_last_12h",
+            "type": "integer",
+            "description": "The number of unsuccessful login attempts made in the last 12 hours."
+          },
+          {
+            "name": "total_of_last_1h_transactions",
+            "type": "number",
+            "description": "The total amount of transactions made in the last hour."
+          },
+          {
+            "name": "merchant_id",
+            "type": "string",
+            "description": "The ID of the merchant where the transaction took place."
+          },
+          {
+            "name": "time_of_day",
+            "type": "string",
+            "description": "The time of day the transaction occurred (e.g. morning, afternoon, evening)."
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "description": "The country of the transaction (e.g. USA, Canda, Mexico)."
+          },
+          {
+            "name": "is_anomaly",
+            "type": "number",
+            "description": "The target variable, 1 for fraud and 0 otherwise"
+          }
+        ]
+      }
+    }
+  ]
+}

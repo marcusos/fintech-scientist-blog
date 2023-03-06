@@ -2,8 +2,7 @@ project:
   type: website
 
 website:
-  title: ""
-  lang: pt
+  title: "FintechScientist"
   #body-footer: "subscribe.html"
   description: "FintechScientist por Marcus Silva"
   reader-mode: true
@@ -38,9 +37,10 @@ website:
 
 format:
   html:
-    theme: litera
+    theme: [litera]
     css: styles.css
     linkcolor: "#6A38D4"
+    navbar-hl: "#6A38D4"
 
 
 

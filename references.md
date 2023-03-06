@@ -1,4 +1,4 @@
- ### References
+() ### References
 * [Quarto Tips](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/)
 * [The ultimate guide to starting a Quarto blog](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html)
 * [How to publish a Quarto Blog](https://quarto.org/docs/publishing/github-pages.html)
@@ -16,6 +16,6 @@
 ## Synthetic data generator
 * [SDV](https://sdv.dev/)
 * [Lib to Generating synth date](https://github.com/sdv-dev/CTGAN)
-
+* [Quarto page about revealsj slides](https://quarto.org/docs/presentations/revealjs/)
 * [How to convert revealjs to PDF: use ?print-pdf](https://stackoverflow.com/questions/40778333/how-to-convert-r-reveal-js-presentation-to-pdf)
 * 
