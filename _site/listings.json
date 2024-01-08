@@ -2,14 +2,14 @@
   {
     "listing": "/courses.html",
     "items": [
-      "/courses/credit_risk_com_ml/credit_risk_landing_page.html"
+      "/courses/modern_ml/index.html"
     ]
   },
   {
     "listing": "/slides.html",
     "items": [
-      "/presentations/isolation_forest_fraude/isolation_forest_fraude.html",
-      "/presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html"
+      "/presentations/variaveis_macro_risco_credito/slide_apresentacao_blog.html",
+      "/presentations/isolation_forest_fraude/isolation_forest_fraude.html"
     ]
   },
   {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FintechScientist - Bem-vindo ao FintechScientist 🖐️</title>
+<title>FintechScientist - SotA ML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/blog-logo-icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/blog-logo-icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,35 +62,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VBYL9R2RYQ"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -119,12 +88,11 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="FintechScientist - Bem-vindo ao FintechScientist 🖐️">
-<meta property="og:image" content="./posts/2023-03-05/isolation-forest-fraud/model_result_decision.png">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="course.scss">
+<meta property="og:title" content="FintechScientist - SotA ML">
+<meta property="og:image" content="images/modern_ml.png">
 <meta property="og:site-name" content="FintechScientist">
 </head>
 
@@ -135,10 +103,10 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/blog-logo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/blog-logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">FintechScientist</span>
     </a>
   </div>
@@ -151,15 +119,15 @@ cookieconsent.run({
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./slides.html" rel="" target="">
+    <a class="nav-link" href="../../slides.html" rel="" target="">
  <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item compact">
@@ -187,8 +155,8 @@ cookieconsent.run({
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Bem-vindo ao FintechScientist 🖐️</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">SotA ML</h1>
                       </div>
   </div>
     
@@ -204,146 +172,224 @@ cookieconsent.run({
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Detecção de Fraude">Detecção de Fraude <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Modelagem de Crédito">Modelagem de Crédito <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Teoria">Teoria <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full column-body" id="quarto-document-content">
 
 
 
 
+<!-- https://icons.getbootstrap.com/icons/terminal/ -->
+<div class="column-page">
+<div class="grid">
+<div class="g-col-12 g-col-md-7">
+<div class="card" style="background-color: #000000; text-align: center;">
+<p><img src="images/modern_ml.png" alt="Credit Risk com ML" style="float: left;"></p>
+</div>
+<!-- <h3>Aplicando ML em dados tabulares com as melhores, modernas e mais essenciais técnicas da indústria</h3> -->
+<h3 style="font-size: 20px" class="anchored">
+Aplicando ML em dados tabulares com o estado da arte e as mais essenciais técnicas da indústria.
+</h3>
+<br>
+<div style="padding: 10px;">
+<p>Eu ensino você, Cientista de Dados, o caminho para se <strong>destacar em 2024</strong>. Não é segredo que o mundo do Machine Learning está repleto de tutoriais desatualizados e cursos que não oferecem soluções práticas e que não usam o estado da arte.</p>
+<p>É hora de dar um passo à frente. Eu estou aqui para ser seu guia, <strong>compartilhando conhecimento direto da linha de frente da indústria</strong>. Este curso é o resultado do meu mergulho profundo na aplicação do ML, <strong>combinando insights da indústria, dos principais papers e livros atuais sobre o tema</strong>.</p>
+</div>
+<p><br></p>
+<p>Imagine criar modelos de classificação extraordinários, não apenas teóricos, mas aplicados em datasets realistas. * Com Python como sua ferramenta principal e um conjunto robusto de bibliotecas * Pandas, Sklearn, Catboost, MAPIE, Shape, Seaborn * Você dominará técnicas cruciais como Engenharia de Feature, Data Centric, Seleção de Features * Calibração, Conformal Prediction, Interpretabilidade de Modelos, Tunagem Eficiente de Parâmetros, Debuging, Criação de políticas e muito mais.</p>
+<p>Você deixará seu chefe de cabelo em pé, se tornará a referência para o seus colegas e conseguirá aquela desejada promoção.</p>
+<p>Aqui, você aplicará as práticas essenciais que impulsionam as principais empresas e startups brasileiras - empresas inovadoras como o QuintoAndar, Nubank, Itaú e outras referências do setor.</p>
+<div class="row" style="max-width: 50%;">
+<div class="col">
+<p><img src="../../images/profile-pic.png" class="img-fluid rounded-circle" style="float: left; margin: 5px; width: 60px;"></p>
+</div>
+<div class="col" style="font-size: 12px; padding-top: 10px">
+<strong>Marcus O. Silva</strong>
+<p style="font-size: 10px;">
+Head de DS no Quinto Andar <br> Professor na Tera <br> MSc em Economia
+</p>
+</div>
+</div>
+</div>
+<div class="g-col-1">
 
+</div>
+<div class="g-col-4">
+<div class="card" style="width: 18rem;">
+<ul class="list-group list-group-flush" style="font-size: 14px !important;">
+<li class="list-group-item">
+<i class="bi bi-terminal"></i> Projetos realistas que ensinam habilidades da indústria.
+</li>
+<li class="list-group-item">
+<i class="bi bi-camera-video"></i> Encontros <strong>ao vivo</strong>, 2x por semana, duração de 4 semanas.
+</li>
+<li class="list-group-item">
+<i class="bi bi-people"></i> Aprenda junto com um grupo de colegas profissionais e entre para a nossa comunidade.
+</li>
+</ul>
+</div>
+<p><br></p>
+<div class="card" style="width: 18rem; $small-font-size; background-color: #000000">
+<div class="card-body" style="width: 18rem; font-size: 14px; color: #ffffff;">
+<p>PRÓXIMA TURMA (3 semanas)<br> <strong>12 de fevereiro</strong></p>
+<p>PREÇO (primeiro lote)<br> <strong>R$ 2000 (2500)</strong></p>
+<!-- <a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">INSCREVA-SE AGORA</a> -->
+<p><a class="btn btn-dark border-0" href="#" role="button" style="background-color: #6A38D4 !important;">EM BREVE</a></p>
+</div>
+</div>
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="column-screen" style="background-color: #000000; padding: 10px;">
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+  <p style="text-align: center; font-weight: bold; margin: 30px; color: #ffffff;" <big="">Curso ensinado por um profissional<br>com vasta experiência na indústria!
+  </p>
+  
+  <div class=".column-body" style="margin: 0 auto; width: 55%;">
+  
+    <div class="card mb-3 shadow-sm" style="">
+      <div class="card-body grid" style="">
+        <div class="g-col-3">
+          <img src="../../images/profile-pic.png" class="img-fluid rounded" style="float: left; padding-right: 10px; width: 250px;">
+          <img src="https://cozy-assets.quintoandar.com.br/logo/v16/default/complete.svg">
+        </div>
+        <div class="g-col-9" style="padding: 5px;">
+          <big style="font-weight: bold;">Marcus O. Silva</big><br>
+          <small class="text-muted">Head de DS no Quinto Andar e MSc em Economia</small><br>
+          <small> Sou um instrutor experiente em Data Science, com mais de 5 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech e em problemas com dados tabulares (fraude, crédito, pricing e etc)  eu sou o instrutor certo para você.</small>
+        </div>
     </div>
+  
+    </div>
+  
+  </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Detecção de Fraude,Machine Learning" data-listing-date-sort="1677985200000" data-listing-file-modified-sort="1678112705451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html"> <img src="./posts/2023-03-05/isolation-forest-fraud/model_result_decision.png" class="thumbnail-image"> </a></p>
+<!-- Course About -->
+<div class="column-body-outset">
+<h2 style="text-align: center" class="anchored">
+Sobre o Curso
+</h2>
+<div class="grid">
+<div class="g-col-5">
+<p><strong>Para Quem é esse Curso?</strong></p>
 </div>
-<div class="body">
-<a href="./posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html">
-<h3 class="no-anchor listing-title">
-Quer saber como aplicar o Isolation Forest para detecção de fraudes?
-</h3>
-<div class="listing-subtitle">
+<div class="g-col-7">
+<p><i class="bi bi-asterisk icon-purple"></i> Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte. <br> <i class="bi bi-asterisk icon-purple"></i> Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito. <br> <i class="bi bi-asterisk icon-purple"></i> Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. <br></p>
+</div>
+<div class="g-col-5">
+<p><strong>Pré-requisitos?</strong></p>
+</div>
+<div class="g-col-7">
+<p><i class="bi bi-check icon-purple"></i>Conhecimento de Python, incluindo Pandas e NumPy.<br> <i class="bi bi-check icon-purple"></i>Fundamentos básicos de aprendizado de máquina.<br></p>
+</div>
+</div>
+</div>
+<!-- Course outline -->
+<div class="column-body-outset">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" style="border-left-color: #9A6EF8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 1 - Processamento dos dados
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><small></small></p><small>
+</small><p><small></small></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" style="border-left-color: #9A6EF8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 2 -
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><small> </small></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="bi bi-calendar"></i> Semana 3 -
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><small> </small></p>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<!-- ARGUMENTS -->
+<div class="column-body">
+<div class="grid">
+<div class="g-col-1">
 
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Detecção de Fraude'); return false;">
-Detecção de Fraude
+<div class="g-col-5">
+<strong>Projetos do mundo real</strong>
+<p style="font-size: 14px">
+Trabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho
+</p>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
+<div class="g-col-5">
+<p><img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;"></p>
 </div>
-</div>
-<a href="./posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html">
-<div class="listing-description">
-<p>Aprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html">
-<div class="listing-date">
-5 de mar. de 2023
-</div>
-<div class="listing-author">
-Marcus O. Silva
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Modelagem de Crédito,Machine Learning" data-listing-date-sort="1677207600000" data-listing-file-modified-sort="1677242747867" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22">
-<div class="thumbnail">
-<p><a href="./posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html"> <img src="./posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/banner_post.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html">
-<h3 class="no-anchor listing-title">
-O Guia Essencial para Modelagem de Risco de Crédito
-</h3>
-<div class="listing-subtitle">
+<div class="g-col-1">
 
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Modelagem de Crédito'); return false;">
-Modelagem de Crédito
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-</div>
-<a href="./posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html">
-<div class="listing-description">
-<p>Entenda os principais conceitos na modelagem de risco de crédito. E saiba como ela pode ser otimizada com machine learning!</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html">
-<div class="listing-date">
-24 de fev. de 2023
-</div>
-<div class="listing-author">
-Marcus O. Silva
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Modelagem de Crédito,Teoria" data-listing-date-sort="1670727600000" data-listing-file-modified-sort="1670807695699" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/o-que-e-probabilidade-de-inad/index.html"> <p class="card-img-top"><img src="posts/o-que-e-probabilidade-de-inad/h_default_h_rate.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/o-que-e-probabilidade-de-inad/index.html">
-<h3 class="no-anchor listing-title">
-O que é a Probabilidade de Inadimplência (PD)?
-</h3>
-<div class="listing-subtitle">
+<div class="g-col-1">
 
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Modelagem de Crédito'); return false;">
-Modelagem de Crédito
+<div class="g-col-5">
+<p><img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;"></p>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('Teoria'); return false;">
-Teoria
+<div class="g-col-5">
+<strong>Acesso ao vivo</strong>
+<p style="font-size: 14px">
+Sessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.
+</p>
 </div>
-</div>
-<a href="./posts/o-que-e-probabilidade-de-inad/index.html">
-<div class="listing-description">
-A probabilidade de inadimplência (<em>probability of default</em> ou PD) é um conceito importante em modelagem de risco de crédito. É a probabilidade de que um tomador de empréstimo não consiga honrar seu empréstimo. Em outras…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/o-que-e-probabilidade-de-inad/index.html">
-<div class="listing-date">
-11 de dez. de 2022
-</div>
-<div class="listing-author">
-Marcus O. da Silva
-</div>
-</a>
+<div class="g-col-1">
+
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-Nenhum item correspondente
+<!-- QUESTIONS -->
+<div class="column-page">
+<h2 style="text-align: center" class="anchored">
+Perguntas Frequentes
+</h2>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-</div></main> <!-- /main -->
+<div class="callout-title-container flex-fill">
+Qual é o compromisso de tempo para este curso?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

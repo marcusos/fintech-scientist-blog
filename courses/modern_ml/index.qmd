@@ -1,0 +1,220 @@
+---
+title: "SotA ML"
+format:
+  html:
+    page-layout: full
+    css: course.scss
+---
+<!-- https://icons.getbootstrap.com/icons/terminal/ -->
+:::{.column-page}
+:::{.grid}
+::: {.g-col-12 .g-col-md-7}
+
+<div class='card' style="background-color: #000000; text-align: center;">
+<img src="images/modern_ml.png" alt="Credit Risk com ML" style="float: left;" />
+</div>
+
+<!-- <h3>Aplicando ML em dados tabulares com as melhores, modernas e mais essenciais técnicas da indústria</h3> -->
+<h3 style='font-size: 20px'>Aplicando ML em dados tabulares com o estado da arte e as mais essenciais técnicas da indústria.</h3>
+
+<br>
+<div class="card shadow-sm" style="padding: 10px;">
+Eu ensino você, Cientista de Dados, o caminho para se **destacar em 2024**. Não é segredo que o mundo do Machine Learning está repleto de tutoriais desatualizados e cursos que não oferecem soluções práticas e que não usam o estado da arte.
+
+É hora de dar um passo à frente. Eu estou aqui para ser seu guia, **compartilhando conhecimento direto da linha de frente da indústria**. Este curso é o resultado do meu mergulho profundo na aplicação do ML, **combinando insights da indústria, dos principais papers e livros atuais sobre o tema**.
+</div>
+<br>
+
+Imagine criar modelos de classificação extraordinários, não apenas teóricos, mas aplicados em datasets realistas. 
+* Com Python como sua ferramenta principal e um conjunto robusto de bibliotecas
+* Pandas, Sklearn, Catboost, MAPIE, Shape, Seaborn
+* Você dominará técnicas cruciais como Engenharia de Feature, Data Centric, Seleção de Features 
+* Calibração, Conformal Prediction, Interpretabilidade de Modelos, Tunagem Eficiente de Parâmetros, Debuging, Criação de políticas e muito mais.
+
+Você deixará seu chefe de cabelo em pé, se tornará a referência para o seus colegas e conseguirá aquela desejada promoção. 
+
+Aqui, você aplicará as práticas essenciais que impulsionam as principais empresas e startups brasileiras - empresas inovadoras como o QuintoAndar, Nubank, Itaú e outras referências do setor.
+
+<div class="row" style="max-width: 50%;">
+<div class="col">
+  <img src="../../images/profile-pic.png" class="img-fluid rounded-circle" style="float: left; margin: 5px; width: 60px;">
+</div>
+<div class="col" style="font-size: 12px; padding-top: 10px">
+**Marcus O. Silva**
+<p style="font-size: 10px;">Head de DS no Quinto Andar <br> Professor na Tera <br> MSc em Economia</p>
+</div>
+</div>
+
+:::
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-4}
+
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush" style="font-size: 14px !important;">
+    <li class="list-group-item">
+      <i class="bi bi-terminal"></i>
+      Projetos realistas que ensinam habilidades da indústria.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-camera-video"></i>
+      Encontros **ao vivo**, 2x por semana, duração de 4 semanas.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-people"></i>
+      Aprenda junto com um grupo de colegas profissionais e entre para a nossa comunidade.
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem; $small-font-size; background-color: #000000">
+<div class="card-body" style="width: 18rem; font-size: 14px; color: #ffffff;">
+PRÓXIMA TURMA (3 semanas)</br>
+**12 de fevereiro**
+
+PREÇO (primeiro lote)</br>
+**R$ 2000 (2500)**
+
+<!-- <a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">INSCREVA-SE AGORA</a> -->
+<a class="btn btn-dark border-0" href="#" role="button" style="background-color: #6A38D4 !important;">EM BREVE</a>
+
+</div>
+</div>
+
+<br>
+
+:::
+
+:::
+:::
+
+```{=html}
+<div class="column-screen"  style="background-color: #000000; padding: 10px;">
+
+  <p style="text-align: center; font-weight: bold; margin: 30px; color: #ffffff;"
+    <big>Curso ensinado por um profissional<br>com vasta experiência na indústria!</big>
+  </p>
+  
+  <div class=".column-body" style="margin: 0 auto; width: 55%;">
+  
+    <div class="card mb-3 shadow-sm" style="">
+      <div class="card-body grid" style="">
+        <div class="g-col-3">
+          <img src="../../images/profile-pic.png" class="img-fluid rounded" style="float: left; padding-right: 10px; width: 250px;">
+          <img src="https://cozy-assets.quintoandar.com.br/logo/v16/default/complete.svg"/>
+        </div>
+        <div class="g-col-9" style="padding: 5px;">
+          <big style="font-weight: bold;">Marcus O. Silva</big><br/>
+          <small class="text-muted">Head de DS no Quinto Andar e MSc em Economia</small><br/>
+          <small> Sou um instrutor experiente em Data Science, com mais de 5 anos liderando times de DS e 3 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech e em problemas com dados tabulares (fraude, crédito, pricing e etc)  eu sou o instrutor certo para você.</small>
+        </div>
+    </div>
+  
+    </div>
+  
+  </div>
+</div>
+```
+
+<!-- Course About -->
+::: {.column-body-outset}
+<h2 style="text-align: center">Sobre o Curso</h2>
+::: {.grid}
+
+::: {.g-col-5}
+**Para Quem é esse Curso?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte. </br>
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito. </br>
+<i class="bi bi-asterisk icon-purple"></i> Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. </br>
+:::
+
+::: {.g-col-5}
+**Pré-requisitos?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-check icon-purple"></i>Conhecimento de Python, incluindo Pandas e NumPy.</br>
+<i class="bi bi-check icon-purple"></i>Fundamentos básicos de aprendizado de máquina.</br>
+:::
+:::
+:::
+
+
+
+<!-- Course outline -->
+::: {.column-body-outset}
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 1 - Processamento dos dados
+<small>
+
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 2 - 
+<small>
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple"}
+## <i class="bi bi-calendar"></i> Semana 3 -
+<small>
+</small>
+:::
+:::
+
+</br></br>
+
+<!-- ARGUMENTS -->
+::: {.column-body}
+::: {.grid}
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+**Projetos do mundo real**
+<p style="font-size: 14px">Trabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho </p>
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-1}
+:::
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-5}
+**Acesso ao vivo**
+<p style="font-size: 14px">Sessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.</p>
+:::
+::: {.g-col-1}
+:::
+
+
+:::
+:::
+
+
+
+<!-- QUESTIONS -->
+::: {.column-page}
+
+<h2 style="text-align: center">Perguntas Frequentes</h2>
+
+::: {.callout-warning icon=false appearance="minimal" collapse=true"}
+## Qual é o compromisso de tempo para este curso?
+:::
+
+:::
+
