@@ -80,9 +80,14 @@ Este curso é **altamente prático**, onde você aplicará os conceitos aprendid
 
 <div class="card" style="width: 18rem; $small-font-size; background-color: #000000">
 <div class="card-body" style="width: 18rem; font-size: 14px; color: #ffffff;">
-PRÓXIMA TURMA (4 semanas)</br>
-**13 de Janeira de 2025**
 
+PRÓXIMA TURMA (4 semanas)</br>
+**13 de Janeira de 2025 (segundas e quartas às 19h)**
+</br>
+
+**Aulas segundas e quartas das 19h às 21h (2h)** 
+
+</br>
 Promoção Black Friday (até o dia 30/11) </br>
 **R$ 1000 (<s>1500</s>)**
 
