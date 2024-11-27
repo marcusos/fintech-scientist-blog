@@ -18,11 +18,6 @@ website:
         href: slides.qmd
       - text: Sobre
         href: index.qmd
-      #- text: Webinars
-      #  href: webinars.qmd
-      # - text: Cursos
-      #  href: courses.qmd
-        #href: credit_risk_landing_page.qmd
       - icon: linkedin
         href: https://linkedin.com/in/marcuos/
       - icon: twitter

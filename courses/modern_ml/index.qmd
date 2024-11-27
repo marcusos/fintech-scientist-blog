@@ -1,0 +1,277 @@
+---
+title: "SotA ML"
+format:
+  html:
+    page-layout: full
+    css: course.scss
+---
+<!-- https://icons.getbootstrap.com/icons/terminal/ -->
+:::{.column-page}
+:::{.grid}
+::: {.g-col-12 .g-col-md-7}
+
+<div class='card' style="background-color: #000000; text-align: center;">
+<img src="images/modern_ml.png" alt="Modern Machine Learning" style="float: left;" />
+</div>
+
+<!-- <h3>Aplicando ML em dados tabulares com as melhores, modernas e mais essenciais técnicas da indústria</h3> -->
+<h3 style='font-size: 25px'>Aplicando Machine Learning em problemas supervisionados com as mais novas e essenciais técnicas da indústria</h3>
+
+O mundo do Machine Learning está saturado de tutoriais desatualizados e cursos que não oferecem soluções práticas ou utilizam o estado da arte. **Chegou a hora de você dar um passo à frente**.
+
+Apresentamos um curso inovador que traz conhecimento direto da linha de frente da indústria. **Combinamos insights práticos com os mais recentes papers e livros**, para que você aprenda o que realmente importa.
+
+Imagine **dominar a criação de modelos supervisionados**, aplicados a datasets realistas. Usando Python e um conjunto poderoso de bibliotecas — **CatBoost, MAPIE, Nixtla, SHAP, Optuna, MLflow** — você irá se aprofundar em técnicas essenciais como:
+
+  * Engenharia de Features
+  * Abordagens Data-Centric
+  * Indo além nas métricas de avaliação e como definir métricas econômicas
+  * Calibração e aplicação de probabilidades em políticas de decisão
+  * Catboost, o melhor modelo para dados tabulares
+  * Previsão de séries temporais macroeconomicas com Nixtla e MLForecasting
+  * Conformal Prediction, adicionando incerteza aos modelos
+  * Interpretabilidade de Modelos, saindo do básico sobre SHAP values
+  * Tunagem de Parâmetros em modelos de Gradient Boosting com o Optuna
+  * Como organizar seu experimentos e o processo de data science usando MLflow
+  * Pós análise (weeks spots e behavior tests)
+
+Com este curso, você impressionará seu chefe, se tornará a referência entre seus colegas e conquistará aquela promoção tão desejada.
+
+**Aprenda e aplique as práticas que impulsionam as principais empresas e startups brasileiras**, como **QuintoAndar, Nubank, Itaú** e outras referências do setor.
+
+Este curso é **altamente prático**, onde você aplicará os conceitos aprendidos em **cases desafiadores**. Com dedicação total aos projetos, você absorverá completamente o conteúdo e aproveitará ao máximo o que o curso oferece, desenvolvendo habilidades que **transformarão sua carreira**.
+
+<!-- <div class="row" style="max-width: 50%;">
+<div class="col">
+  <img src="../../images/profile-pic.png" class="img-fluid rounded-circle" style="float: left; margin: 5px; width: 60px;">
+</div>
+<div class="col" style="font-size: 12px; padding-top: 10px">
+**Marcus O. Silva**
+<p style="font-size: 10px;">Head de DS no Quinto Andar <br> Professor na Tera <br> MSc em Economia</p>
+</div>
+</div> -->
+
+:::
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-4}
+
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush" style="font-size: 14px !important;">
+    <li class="list-group-item">
+      <i class="bi bi-calendar"></i>
+      Projetos realistas que ensinam habilidades da indústria.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-camera-video"></i>
+      Encontros **ao vivo**, 2x por semana, duração de 4 semanas.
+    </li>
+    <li class="list-group-item">
+      <i class="bi bi-people"></i>
+      Aprenda junto com um grupo de colegas profissionais e entre para a nossa comunidade.
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem; $small-font-size; background-color: #000000">
+<div class="card-body" style="width: 18rem; font-size: 14px; color: #ffffff;">
+PRÓXIMA TURMA (4 semanas)</br>
+**13 de Janeira de 2025**
+
+Promoção Black Friday (até o dia 30/11) </br>
+**R$ 1000 (<s>1500</s>)**
+
+<!-- <a class="btn btn-primary border-0" href="#" role="button" style="background-color: #6A38D4 !important;">INSCREVA-SE AGORA</a> -->
+<a class="btn btn-dark border-0" href="https://pay.kiwify.com.br/0FxUzRo" role="button" style="background-color: #6A38D4 !important;">Inscreva-se agora</a>
+</br> </br>
+<p style="width: 18rem; font-size: 12px; color: #ffffff;">(Vagas limitadas)</p>
+</div>
+</div>
+
+<br>
+
+:::
+
+:::
+:::
+
+```{=html}
+<div class="column-screen"  style="background-color: #000000; padding: 10px;">
+
+  <p style="text-align: center; font-weight: bold; margin: 30px; color: #ffffff;"
+    <big>Curso ensinado por um profissional<br>com vasta experiência na indústria!</big>
+  </p>
+  
+  <div class=".column-body" style="margin: 0 auto; width: 55%;">
+  
+    <div class="card mb-3 shadow-sm" style="">
+      <div class="card-body grid" style="">
+        <div class="g-col-3">
+          <img src="../../images/profile-pic.png" class="img-fluid rounded" style="float: left; padding-right: 10px; width: 250px;">
+          <img src="https://cozy-assets.quintoandar.com.br/logo/v16/default/complete.svg"/>
+        </div>
+        <div class="g-col-9" style="padding: 5px;">
+          <big style="font-weight: bold;">Marcus O. Silva</big><br/>
+          <small class="text-muted">Head de DS no Quinto Andar e MSc em Economia</small><br/>
+          <small> Sou um profissional experiente em Data Science, com mais de 6 anos liderando times de DS e 4 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech e em problemas com dados tabulares (fraude, crédito, pricing e etc)  eu sou o instrutor certo para você.</small>
+        </div>
+    </div>
+  
+    </div>
+  
+  </div>
+</div>
+```
+
+<!-- Course About -->
+::: {.column-body-outset}
+<h2 style="text-align: center">Sobre o Curso</h2>
+::: {.grid}
+
+::: {.g-col-5}
+**Para Quem é esse Curso?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados que têm experiência com crédito, mas desejam acompanhar o estado da arte. </br>
+<i class="bi bi-asterisk icon-purple"></i> Cientistas de dados e analistas de dados que desejam começar a fazer modelos de crédito. </br>
+<i class="bi bi-asterisk icon-purple"></i> Qualquer pessoa de dados que deseja entender com exemplos realistas e com maior profundida a aplicação de ML em crédito. </br>
+:::
+
+::: {.g-col-5}
+**Pré-requisitos?**
+:::
+
+::: {.g-col-7}
+<i class="bi bi-check icon-purple"></i>Conhecimento de Python, incluindo Pandas e NumPy.</br>
+<i class="bi bi-check icon-purple"></i>Fundamentos básicos de aprendizado de máquina.</br>
+:::
+:::
+:::
+
+
+
+
+<!-- QUESTIONS -->
+::: {.column-page}
+<h2 style="text-align: center">Agenda</h2>
+:::
+
+<!-- Course outline -->
+::: {.column-body-outset}
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 1 - Prevendo o Churn de uma Fintech
+<small>
+
+ * Como realmente lidar com dados desbalanceados
+ * Como calibrar o seu modelo
+ * O problema do viés de seleção
+ * Splits out-of-time e out-of-sample
+ * Introdução ao CatBoost (melhor modelo para dados tabulares)
+ * O que não te falam sobre métricas de avaliação
+ * Tunando seu modelo com o Optuna (ferramenta simples e eficaz para tunagem de modelos)
+
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple" style="border-left-color: #9A6EF8"}
+## <i class="bi bi-calendar"></i> Semana 2 - Regressão com Incerteza
+<small>
+
+ * Regressão Quantílica vs Regressão Paramétrica
+ * Incerteza dos dados versus incerteza do modelo
+ * Métricas para avaliar regressões
+ * Adicionando incertezas com Conformal Prediction
+ * Interpretabilidade com SHAP e Permutation Importance
+ * Behavior tests e análise de pontos fracos
+ * Salvando seus experimentos com o MLflow
+
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple"}
+## <i class="bi bi-calendar"></i> Semana 3 - Prevendo a inflação do Brasil
+<small>
+
+ * Os componentes de um modelo de série temporal
+ * Melhor biblioteca para aplicar ML em séries temporais (Nixtla)
+ * Conformal Prediction para séries temporais
+ * Lidando com tendência, sazonalidade e variáveis exógenas
+
+</small>
+:::
+
+::: {.callout-note icon=false appearance="simple"}
+## <i class="bi bi-calendar"></i> Semana 4 - Correção dos cases
+<small>
+
+ * Resolvendo o case de Risco  Crédito (Loan Default)
+ * Dicas para a competição de Forecasting em séries temporais
+ * Respondendo perguntas e dúvidas
+
+</small>
+:::
+:::
+
+
+</br></br>
+
+<!-- ARGUMENTS 
+::: {.column-body}
+::: {.grid}
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+**Projetos do mundo real**
+<p style="font-size: 14px">Trabalhe em projetos que dão vida ao seu aprendizado. Feito para ser diretamente aplicável em seu trabalho </p>
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-1}
+:::
+
+::: {.g-col-1}
+:::
+::: {.g-col-5}
+<img src="images/credit_risk_ml.png" alt="Credit Risk com ML" style="width: 70px;  margin: 0 auto;" />
+:::
+::: {.g-col-5}
+**Acesso ao vivo**
+<p style="font-size: 14px">Sessões e perguntas e respostas com nossos instrutores especializados, juntamente com projetos do mundo real.</p>
+:::
+::: {.g-col-1}
+:::
+-->
+
+<!-- QUESTIONS -->
+::: {.column-page}
+
+<h2 style="text-align: center">Tarefas e Avaliações</h2>
+
+  *	Quizzes Semanais: Teste seu conhecimento com um quiz ao final de cada uma das 3 semanas de conteúdo.
+  *	Projeto Final: Desenvolva um modelo de Risco de Crédito com foco na probabilidade de default.
+  *	Competição de Previsão: Participe de uma competição no Kaggle para aplicar técnicas de forecasting em um cenário realista.
+
+<br><br>
+<div style="display: flex; justify-content: center; align-items: center; font-size: 20px'">
+  <a 
+    class="btn btn-dark border-0" 
+    href="https://pay.kiwify.com.br/0FxUzRo" 
+    role="button" 
+    style="background-color: #6A38D4 !important;">
+    Inscreva-se agora!
+  </a>
+</div>
+
+<!-- ::: {.callout-warning icon=false appearance="minimal" collapse=true"}
+## Qual é o compromisso de tempo para este curso?
+::: -->
+
+:::

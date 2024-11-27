@@ -9,3 +9,5 @@
 Você já ouviu falar do algoritmo isolation forest? Ele é uma técnica de detecção de anomalias robusta. O isolation forest se baseia na ideia de que as anomalias são mais facilmente isoladas do que as observações normais em um conjunto de dados. E o melhor de tudo, é muito fácil de entender como ele funciona!
 
 O isolation forest funciona selecionando aleatoriamente uma feature e um valor de divisão para cada árvore de decisão e dividindo recursivamente os dados em subconjuntos menores com base na feature e no valor da divisão. Esse processo continua até que cada data point seja isolado em seu próprio nó folha. A profundidade da árvore necessária para isolar um ponto é uma medida da anormalidade do ponto. O algoritmo da floresta de isolamento atribui uma pontuação de anomalia a cada ponto de dados com base na profundidade média das árvores necessárias para isolar o ponto.
+
+
