@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Marcus O. Silva">
-<meta name="description" content="Aprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!">
 
-<title>FintechScientist - Quer saber como aplicar o Isolation Forest para detecção de fraudes?</title>
+<title>FintechScientist</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -101,9 +134,8 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="FintechScientist - Quer saber como aplicar o Isolation Forest para detecção de fraudes?">
-<meta property="og:description" content="Aprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!">
-<meta property="og:image" content="model_result_decision.png">
+<meta property="og:title" content="FintechScientist">
+<meta property="og:description" content="FintechScientist por Marcus Silva">
 <meta property="og:site_name" content="FintechScientist">
 </head>
 
@@ -167,17 +199,8 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Quer saber como aplicar o Isolation Forest para detecção de fraudes?</h1>
-                  <div>
-        <div class="description">
-          Aprenda a intuição por trás do algoritmo por meio de uma aplicação para detecção de fraudes em cartões!
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Detecção de Fraude</div>
-                <div class="quarto-category">Machine Learning</div>
-              </div>
-                  </div>
+      
+                      </div>
   </div>
     
   
@@ -190,12 +213,6 @@ cookieconsent.run({
             </div>
     </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Data de Publicação</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">5 de março de 2023</p>
-      </div>
-    </div>
     
       
     </div>
@@ -205,7 +222,13 @@ cookieconsent.run({
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -214,26 +237,200 @@ cookieconsent.run({
 
 
 
-<p>🔥 Quer saber como aplicar o Isolation Forest para detecção de fraudes?</p>
-<p>Ao final desse post em formato de slide você terá passado pelos seguintes pontos:</p>
-<ol type="1">
-<li>Aprenda a intuição por trás do algoritmo isolation forest 🌲!</li>
-<li>Descubra como o isolation forest pode ser aplicado para detectar fraudes em cartões</li>
-<li>Treinando o isolation forest</li>
-<li>Um sistema antifraude usando o isolation forest</li>
-<li>Veja as vatagens e desvatagens do isolation forest</li>
-</ol>
-<p>Você já ouviu falar do algoritmo isolation forest? Ele é uma técnica de detecção de anomalias robusta. O isolation forest se baseia na ideia de que as anomalias são mais facilmente isoladas do que as observações normais em um conjunto de dados. E o melhor de tudo, é muito fácil de entender como ele funciona!</p>
-<p>O isolation forest funciona selecionando aleatoriamente uma feature e um valor de divisão para cada árvore de decisão e dividindo recursivamente os dados em subconjuntos menores com base na feature e no valor da divisão. Esse processo continua até que cada data point seja isolado em seu próprio nó folha.</p>
-<p>A profundidade da árvore necessária para isolar um ponto é uma medida da anormalidade do ponto. O algoritmo da floresta de isolamento atribui uma pontuação de anomalia a cada ponto de dados com base na profundidade média das árvores necessárias para isolar o ponto.</p>
+<table class="table">
+<colgroup>
+<col style="width: 4%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>title: “Poderosa combinação: Catboost com Conformal Prediction para análise de risco de crédito” date: “02/24/2023” categories: [Modelagem de Crédito, Machine Learning] image: banner_post.png description: Entenda os principais conceitos na modelagem de risco de crédito. E saiba como ela pode ser otimizada com machine learning!</td>
+</tr>
+</tbody>
+</table>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Machine Learning</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lightgbm <span class="im">import</span> LGBMClassifier</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Metrics</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score, precision_score, recall_score, f1_score</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span>  precision_recall_curve, roc_curve, roc_auc_score, average_precision_score</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualisation</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib_venn <span class="im">import</span> venn2, venn3</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>primary_color <span class="op">=</span> <span class="st">'#6938d4'</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>analog_color <span class="op">=</span> <span class="st">'#3855d4'</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>analog_color2<span class="op">=</span> <span class="st">'#b738d4'</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>sec_color <span class="op">=</span> <span class="st">'#a3d438'</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>error_color <span class="op">=</span> <span class="st">'#C62828'</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>tria_color <span class="op">=</span> <span class="st">'#d438a3'</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>tria_color2 <span class="op">=</span> <span class="st">'#d46938'</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bcb <span class="im">import</span> sgs</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bcb <span class="im">import</span> Expectativas, sgs</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> plt_io</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># create our custom_dark theme from the plotly_dark template</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">"custom_dark"</span>] <span class="op">=</span> plt_io.templates[<span class="st">"plotly_dark"</span>]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># set the paper_bgcolor and the plot_bgcolor to a new color</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">"custom_dark"</span>][<span class="st">'layout'</span>][<span class="st">'paper_bgcolor'</span>] <span class="op">=</span> <span class="st">'#111111'</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">"custom_dark"</span>][<span class="st">'layout'</span>][<span class="st">'plot_bgcolor'</span>] <span class="op">=</span> <span class="st">'#111111'</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#plt_io.templates["custom_dark"]['layout']['font']['size'] = 12</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>color_pallet <span class="op">=</span> (<span class="st">"#6A38D4"</span>,) <span class="op">+</span> plt_io.templates[<span class="st">"custom_dark"</span>][<span class="st">'layout'</span>][<span class="st">'colorway'</span>]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">"custom_dark"</span>][<span class="st">'layout'</span>][<span class="st">'colorway'</span>] <span class="op">=</span> color_pallet</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">"custom_dark"</span>][<span class="st">'layout'</span>][<span class="st">'title'</span>][<span class="st">'font'</span>][<span class="st">'color'</span>] <span class="op">=</span> <span class="st">'#A6A5A5'</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># you may also want to change gridline colors if you are modifying background</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">'custom_dark'</span>][<span class="st">'layout'</span>][<span class="st">'yaxis'</span>][<span class="st">'gridcolor'</span>] <span class="op">=</span> <span class="st">'#4A4A4A'</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">'custom_dark'</span>][<span class="st">'layout'</span>][<span class="st">'xaxis'</span>][<span class="st">'gridcolor'</span>] <span class="op">=</span> <span class="st">'#4A4A4A'</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>plt_io.templates[<span class="st">'custom_dark'</span>][<span class="st">'layout'</span>][<span class="st">'font'</span>][<span class="st">'color'</span>] <span class="op">=</span> <span class="st">'#A6A5A5'</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>custom_template <span class="op">=</span> {</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"layout"</span>: go.Layout(</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        font<span class="op">=</span>{</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>            <span class="co">#"family": "Open Sans",</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">"size"</span>: <span class="dv">12</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            <span class="st">"color"</span>: <span class="st">"#707070"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span>{</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">"font"</span>: {</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                <span class="co">#"family": "Open Sans",</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                <span class="st">"size"</span>: <span class="dv">18</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                <span class="co">#"color": "#1f1f1f",</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">"color"</span>: <span class="st">"#6A38D4"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        plot_bgcolor<span class="op">=</span><span class="st">"#555050"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        paper_bgcolor<span class="op">=</span><span class="st">"#555050"</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="co">#plot_bgcolor="#FFFFFF",</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="co">#paper_bgcolor="#FFFFFF",</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="co">#colorway=["#6A38D4"] + px.colors.qualitative.G10</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        colorway<span class="op">=</span>[<span class="st">"#9A6EF8"</span>] <span class="op">+</span> px.colors.qualitative.G10</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> format_title(title, subtitle<span class="op">=</span><span class="va">None</span>, subtitle_font_size<span class="op">=</span><span class="dv">14</span>):</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="ss">f'&lt;b&gt;</span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">&lt;/b&gt;'</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> subtitle:</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> title</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    subtitle <span class="op">=</span> <span class="ss">f'&lt;span style="font-size: </span><span class="sc">{</span>subtitle_font_size<span class="sc">}</span><span class="ss">px;"&gt;</span><span class="sc">{</span>subtitle<span class="sc">}</span><span class="ss">&lt;/span&gt;'</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">&lt;br&gt;</span><span class="sc">{</span>subtitle<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> series_pct_format(series, prec<span class="op">=</span><span class="dv">2</span>):</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> series.<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">'{0:.</span><span class="sc">{pre}</span><span class="st">f}%'</span>.<span class="bu">format</span>(x, pre<span class="op">=</span>prec))</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"plotly_dark"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="buscando-os-indicadores-macroeconômicos-do-bacen-em-python" class="level5">
+<h5 class="anchored" data-anchor-id="buscando-os-indicadores-macroeconômicos-do-bacen-em-python">Buscando os indicadores macroeconômicos do Bacen em python</h5>
+<div id="cell-5" class="cell" data-pycharm="{&quot;is_executing&quot;:true}">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># instale a lib do Bacen</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install python<span class="op">-</span>bcb</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-6" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>series <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &lt;descrição da série&gt;: &lt;código da série&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Endividamento familiar'</span>: <span class="dv">29037</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Inflação (IPCA)'</span>: <span class="dv">13522</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Taxa de Juros (CDI)'</span>: <span class="dv">4392</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Taxa de Desemprego'</span>: <span class="dv">24369</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando as variáveis</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sgs.get(series, start<span class="op">=</span><span class="st">'2021-01-01'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Acesse o sistema de séries temporais do BACEN para consultar as definições dessas séries: <a href="https://www4.bcb.gov.br/pec/series/port/aviso.asp?frame=1">aqui</a></p>
+<div id="cell-8" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_p <span class="op">=</span> df.reset_index()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_p <span class="op">=</span> df_p.melt(value_vars<span class="op">=</span>df.columns, id_vars<span class="op">=</span>[<span class="st">'Date'</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 var_name<span class="op">=</span><span class="st">"indicator"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                 value_name<span class="op">=</span><span class="st">"value"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>df_p <span class="op">=</span> df_p[df_p.Date <span class="op">&lt;=</span> <span class="st">'2022-10-01'</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="plot-dos-indicadores-macroeconômicos" class="level5">
+<h5 class="anchored" data-anchor-id="plot-dos-indicadores-macroeconômicos">Plot dos Indicadores macroeconômicos</h5>
+<div id="cell-10" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> series_pct_format(series, prec<span class="op">=</span><span class="dv">2</span>):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> series.<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">'{0:.</span><span class="sc">{pre}</span><span class="st">f}%'</span>.<span class="bu">format</span>(x, pre<span class="op">=</span>prec))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(df_p, x<span class="op">=</span><span class="st">'Date'</span>, y<span class="op">=</span><span class="st">"value"</span>, title<span class="op">=</span>format_title(<span class="st">""</span>, <span class="st">''</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>              template<span class="op">=</span><span class="st">'custom_dark'</span>, height<span class="op">=</span><span class="dv">500</span>, width<span class="op">=</span><span class="dv">900</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              facet_col<span class="op">=</span><span class="st">"indicator"</span>, facet_col_wrap<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>              facet_row_spacing<span class="op">=</span><span class="fl">0.08</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>              facet_col_spacing<span class="op">=</span><span class="fl">0.08</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>fig.for_each_annotation(<span class="kw">lambda</span> a: a.update(text<span class="op">=</span>a.text.split(<span class="st">"="</span>)[<span class="dv">1</span>]))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>fig.update_xaxes(title<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>fig.update_yaxes(title<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> fig.update_yaxes(matches<span class="op">=</span><span class="va">None</span>, showticklabels<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.update_traces(textposition='top center')</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.update_layout(yaxis_range=[1.6, 2.4])</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.for_each_trace(</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">#    lambda trace: trace.update(marker_symbol="square") if trace.y ==  else (),</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">#)</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.add_vline(df_p.Date.max(), row=1,col=1)</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.add_annotation(2, x=df_p.Date.max(), row=1,col=1)</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.add_trace(go.Scatter(...), row='all', col='all', exclude_empty_subplots=True)</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.add_annotation</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.fo</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.update_traces(textposition='top center')</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># add traces for annotations and text for end of lines</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, d <span class="kw">in</span> <span class="bu">enumerate</span>(fig.data):</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    row    <span class="op">=</span> (<span class="dv">2</span><span class="op">+</span><span class="dv">1</span>) <span class="op">-</span> <span class="bu">int</span>(i <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    column <span class="op">=</span> <span class="bu">int</span>(i <span class="op">%</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print('i:', i, 'd:', d)</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    fig.add_scatter(x<span class="op">=</span>[d.x[<span class="op">-</span><span class="dv">1</span>]], y <span class="op">=</span> [d.y[<span class="op">-</span><span class="dv">1</span>]],</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>                    mode <span class="op">=</span> <span class="st">'markers+text'</span>,</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>                    text <span class="op">=</span> <span class="bu">str</span>(<span class="bu">round</span>(d.y[<span class="op">-</span><span class="dv">1</span>],<span class="dv">1</span>)) <span class="op">+</span> <span class="st">' %'</span>,</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>                    textfont <span class="op">=</span> <span class="bu">dict</span>(color<span class="op">=</span>d.line.color),</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>                    <span class="co">#textfont = dict(color=d.line.color),</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                    textposition<span class="op">=</span><span class="st">'middle left'</span>,</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>                    marker <span class="op">=</span> <span class="bu">dict</span>(color <span class="op">=</span> d.line.color, size <span class="op">=</span> <span class="dv">12</span>),</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>                    legendgroup <span class="op">=</span> d.name,</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>                    showlegend<span class="op">=</span><span class="va">False</span>, row<span class="op">=</span>row,col<span class="op">=</span>column)</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="co">#fig.show()</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>img_bytes <span class="op">=</span> fig.to_image(<span class="bu">format</span><span class="op">=</span><span class="st">"png"</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>Image(img_bytes)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
-<iframe class="slide-deck" width="100%" height="600" src="../../../presentations/isolation_forest_fraude/isolation_forest_fraude.html"></iframe>
-<center>
-<a href="../../../presentations/isolation_forest_fraude/isolation_forest_fraude.html" target="_blank">Abrir o slide</a>
-</center>
+<figure class="figure">
+<p><img src="slide_apresentacao_blog_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <!-- ConvertKit Forms -->

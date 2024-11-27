@@ -1,8 +1,11 @@
 [
   {
-    "listing": "/courses.html",
+    "listing": "/blog.html",
     "items": [
-      "/courses/modern_ml/index.html"
+      "/posts/2024-01-29/catboost-com-conformal-prediction-para-analise-credito/slide_apresentacao_blog.html",
+      "/posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
+      "/posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html",
+      "/posts/o-que-e-probabilidade-de-inad/index.html"
     ]
   },
   {
@@ -13,11 +16,9 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/courses.html",
     "items": [
-      "/posts/2023-03-05/isolation-forest-fraud/isolation-forest-fraud.html",
-      "/posts/2023-02-24/guia-essencial-para-modelagem-risco-credito/index.html",
-      "/posts/o-que-e-probabilidade-de-inad/index.html"
+      "/courses/modern_ml/index.html"
     ]
   }
 ]
