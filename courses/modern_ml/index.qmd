@@ -11,7 +11,7 @@ format:
 ::: {.g-col-12 .g-col-md-7}
 
 <div class='card' style="background-color: #000000; text-align: center;">
-<img src="images/modern_ml.png" alt="Modern Machine Learning" style="float: left;" />
+<img src="images/logo_modern_ml.png" width="250" alt="Modern Machine Learning" style="float: left; padding-left: 20px; padding-top: 10px" />
 </div>
 
 <!-- <h3>Aplicando ML em dados tabulares com as melhores, modernas e mais essenciais técnicas da indústria</h3> -->
@@ -82,7 +82,7 @@ Este curso é **altamente prático**, onde você aplicará os conceitos aprendid
 <div class="card-body" style="width: 18rem; font-size: 14px; color: #ffffff;">
 
 PRÓXIMA TURMA (4 semanas)</br>
-**13 de Janeira de 2025 (segundas e quartas às 19h)**
+**13 de Janeira de 2025**
 </br>
 
 **Aulas segundas e quartas das 19h às 21h (2h)** 
@@ -105,6 +105,38 @@ Promoção Black Friday (até o dia 30/11) </br>
 :::
 :::
 
+```{=html}
+<div class="container py-4" style="background-color: #000000; color: #ffffff;">
+  <p class="text-center font-weight-bold mb-4">
+    <big>Curso ensinado por um profissional<br>com vasta experiência na indústria!</big>
+  </p>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0 align-items-center">
+          <!-- Profile Image -->
+          <div class="col-12 col-md-4 text-center p-3">
+            <img src="../../images/profile-pic.png" class="img-fluid rounded mb-3" alt="Profile Picture" style="max-width: 150px;"> <br>
+            <img src="https://cozy-assets.quintoandar.com.br/logo/v16/default/complete.svg" class="img-fluid" alt="Logo">
+          </div>
+          <!-- Profile Details -->
+          <div class="col-12 col-md-8 p-3">
+            <h5 class="font-weight-bold">Marcus O. Silva</h5>
+            <p class="text-muted mb-2">Head de DS no Quinto Andar e MSc em Economia</p>
+            <p style="font-size: 0.9rem;">
+              Sou um profissional experiente em Data Science, com mais de 6 anos liderando times de DS e 4 anos de experiência aplicando DS em Fintech. Trabalho com modelos de crédito em grande escala e já atuei em diferentes empresas (Conta Azul, Quero Educação, Quinto Andar, dentre outras...). Eu recebi prêmios por projetos inovadores em DS, incluindo o prêmio de projeto mais inovador na especialização DS4A de correlation one e o prêmio "commit de ouro" no Quinto Andar. Além disso, sou formado em ciências da computação e tenho um mestrado em economia pela Mackenzie. Eu tenho mais de 2 anos de experiência ensinando Data Science e já dei aulas para mais de 200 alunos, com uma média de avaliação de 9 em NPS. Se você quer aprender Data Science com alguém com ampla experiência e habilidades específicas em Fintech e em problemas com dados tabulares (fraude, crédito, pricing e etc) eu sou o instrutor certo para você.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+<!-- 
 ```{=html}
 <div class="column-screen"  style="background-color: #000000; padding: 10px;">
 
@@ -132,6 +164,7 @@ Promoção Black Friday (até o dia 30/11) </br>
   </div>
 </div>
 ```
+-->
 
 <!-- Course About -->
 ::: {.column-body-outset}
@@ -223,8 +256,6 @@ Promoção Black Friday (até o dia 30/11) </br>
 :::
 :::
 
-
-</br></br>
 
 <!-- ARGUMENTS 
 ::: {.column-body}
